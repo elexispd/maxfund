@@ -18,7 +18,7 @@ class DashboardController extends Controller
             'totalInvested' => Investment::where('user_id', $user->id)
                                 ->where('status', 'active')
                                 ->sum('amount'),
-            'totalReferrals' => User::where('referred', operator: $user->id)
+            'totalReferrals' => User::where('referred_by', operator: $user->id)
                                 ->count(),
             'activeInvestments' => Investment::where('user_id', $user->id)
                                 ->where('status', 'active')
