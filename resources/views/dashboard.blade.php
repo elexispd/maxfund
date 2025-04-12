@@ -26,7 +26,7 @@
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
                   <p class="card-category">Balance</p>
-                  <h4 class="card-title">{{ Auth::user()->balance }}</h4>
+                  <h4 class="card-title">${{ number_format(Auth::user()->balance, 2) }}</h4>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
                   <p class="card-category">Payouts</p>
-                  <h4 class="card-title">576</h4>
+                  <h4 class="card-title">${{ number_format($stats['payouts'], 2) }}</h4>
                 </div>
               </div>
             </div>

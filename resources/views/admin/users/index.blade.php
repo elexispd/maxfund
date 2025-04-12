@@ -16,7 +16,7 @@
                         </div>
                     @else
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table id="basic-datatables" class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>

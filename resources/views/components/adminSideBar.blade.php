@@ -88,17 +88,22 @@
             <div class="collapse" id="deposit">
               <ul class="nav nav-collapse">
                 <li>
-                  <a href="{{ route('user.deposit.create') }}">
+                  <a href="{{ route('admin.deposit.index') }}?status=pending">
                     <span class="sub-item">Pending Deposits</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.deposit.index') }}">
+                  <a href="{{ route('admin.deposit.index') }}?status=approved">
                     <span class="sub-item">Approved Deposits</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.deposit.index') }}">
+                  <a href="{{ route('admin.deposit.index') }}?status=rejected">
+                    <span class="sub-item">Rejected Deposits</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ route('admin.deposit.index') }}">
                     <span class="sub-item">All Deposits</span>
                   </a>
                 </li>

@@ -97,8 +97,8 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/deposits')->group(function () {
             Route::get('/', [AdminDepositController::class, 'index'])->name('admin.deposit.index');
-            Route::get('/{deposit}', [AdminDepositController::class, 'show'])->name('admin.deposit.show');
-            Route::post('/{deposit}', [AdminDepositController::class, 'update'])->name('admin.deposit.update');
+            Route::put('approve/{deposit}', [AdminDepositController::class, 'approve'])->name('admin.deposits.approve');
+            Route::put('reject/{deposit}', [AdminDepositController::class, 'reject'])->name('admin.deposits.reject');
 
         });
 

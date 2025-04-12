@@ -43,13 +43,15 @@ class AuthenticatedSessionController extends Controller
             ]);
         }
 
+
+
         // Proceed with normal login for active users
         $request->session()->regenerate();
 
         if ($user->role == "admin") {
-            return redirect()->intended(route('admin.dashboard', absolute: false));
+            return redirect()->intended(route('admin.dashboard'));
         } else {
-            return redirect()->intended(route('dashboard', absolute: false));
+            return redirect()->intended(route('dashboard'));
         }
     }
 

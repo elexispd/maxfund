@@ -25,8 +25,8 @@
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
-                  <p class="card-category">Balance</p>
-                  <h4 class="card-title">53</h4>
+                  <p class="card-category">Total Withdrawals</p>
+                  <h4 class="card-title">{{ $stats['totalWithdraws'] }}</h4>
                 </div>
               </div>
             </div>
@@ -46,8 +46,8 @@
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
-                  <p class="card-category">No of Referrals</p>
-                  <h4 class="card-title">336</h4>
+                  <p class="card-category">Total Users</p>
+                  <h4 class="card-title">{{ $stats['totalUsers'] }}</h4>
                 </div>
               </div>
             </div>
@@ -67,8 +67,8 @@
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
-                  <p class="card-category">Invested Amount</p>
-                  <h4 class="card-title">$23</h4>
+                  <p class="card-category">Active Investments</p>
+                  <h4 class="card-title">{{ $stats['activeInvestments'] }}</h4>
                 </div>
               </div>
             </div>
@@ -88,8 +88,8 @@
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
-                  <p class="card-category">Payouts</p>
-                  <h4 class="card-title">576</h4>
+                  <p class="card-category">Pending Withdrawals</p>
+                  <h4 class="card-title">{{ $stats['totalPendingWithdraws'] }}</h4>
                 </div>
               </div>
             </div>

@@ -8,11 +8,9 @@ class ReferralController extends Controller
 {
     public function index()
     {
-        // Fetch the referral data for the authenticated user
         $referrals = auth()->user()->referrals()
-            ->with('referrer') // Eager load the referrer relationship
-            ->latest()
-            ->paginate(10); // 10 items per page
+         ->with('referrer') // Now this will work
+         ->latest()->get();
 
         return view('referrals.index', compact('referrals'));
     }

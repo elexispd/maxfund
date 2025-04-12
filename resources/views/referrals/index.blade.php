@@ -6,17 +6,17 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">My Investments</h4>
-                    <p class="text-muted mb-0">All your active and completed investments</p>
+                    <h4 class="card-title">My Referrals</h4>
+                    <p class="text-muted mb-0">All your referrals appear here</p>
                 </div>
                 <div class="card-body">
-                    @if($referrals->isEmpty())
+                    @if(auth()->user()->referrals()->count() === 0)
                         <div class="alert alert-info">
                             You haven't made any referrals yet.
                         </div>
                     @else
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table id="basic-datatables" class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -29,7 +29,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $referral->name }}</td>
-                                        <td>{{ $referral->created_at }}</td>
+                                        <td>{{ $referral->created_at->format('M d, Y H:i') }}</td>
 
                                     </tr>
                                     @endforeach
@@ -37,10 +37,7 @@
                             </table>
                         </div>
 
-                        <!-- Pagination -->
-                        <div class="mt-3">
-                            {{ $investments->links() }}
-                        </div>
+
                     @endif
                 </div>
             </div>

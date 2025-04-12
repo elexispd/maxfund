@@ -45,6 +45,7 @@
                               <th>SN</th>
                               <th>Payment Method</th>
                               <th>Amount</th>
+                              <th>Date</th>
                               <th>Status</th>
                             </tr>
                           </thead>
@@ -60,6 +61,7 @@
                                         @endif
                                     </td>
                                     <td>${{ number_format($deposit->amount, 2) }}</td>
+                                    <td>{{ $deposit->created_at->format('M-d-Y, d H:i:s') }}</td>
                                     <td>
                                         @if($deposit->status === 'approved')
                                             <span class="badge bg-success">Approved</span>

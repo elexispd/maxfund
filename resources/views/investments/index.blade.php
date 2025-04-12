@@ -13,13 +13,13 @@
                     @if($investments->isEmpty())
                         <div class="alert alert-info">
                             You haven't made any investments yet.
-                            <a href="{{ route('user.investment.plans') }}" class="alert-link">
+                            <a href="{{ route('user.investment.plan') }}" class="alert-link">
                                 Browse investment plans
                             </a>
                         </div>
                     @else
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table id="basic-datatables" class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
