@@ -26,7 +26,7 @@
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
                   <p class="card-category">Balance</p>
-                  <h4 class="card-title">{{ Auth::user()->balance }}</h4>
+                  <h4 class="card-title">53</h4>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
                   <p class="card-category">No of Referrals</p>
-                  <h4 class="card-title">{{ $stats['totalReferrals'] }}</h4>
+                  <h4 class="card-title">336</h4>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@
               <div class="col col-stats ms-3 ms-sm-0">
                 <div class="numbers">
                   <p class="card-category">Invested Amount</p>
-                  <h4 class="card-title">$ {{ number_format($stats['totalInvested'], 2) }}</h4>
+                  <h4 class="card-title">$23</h4>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@
           </div>
           <div class="card-body pb-0">
             <div class="mb-4 mt-2">
-              <h1> <a> {{ config('app.url') }}//{{ Auth::user()->referral_code }}</a> </h1>
+              <h1> <a> {{ Auth::user()->referral_code }}</a> </h1>
             </div>
 
           </div>

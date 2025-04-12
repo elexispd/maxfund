@@ -44,31 +44,33 @@
             <span class="sidebar-mini-icon">
               <i class="fa fa-ellipsis-h"></i>
             </span>
-            <h4 class="text-section">Wallet</h4>
+            <h4 class="text-section">Users</h4>
           </li>
 
           <li class="nav-item">
-            <a data-bs-toggle="collapse" href="#base">
-              <i class="fas fa-money-check-alt"></i>
-              <p>Wallet</p>
+            <a data-bs-toggle="collapse" href="#users">
+              <i class="fas fa-users"></i>
+              <p>Users</p>
               <span class="caret"></span>
             </a>
-            <div class="collapse" id="base">
+            <div class="collapse" id="users">
               <ul class="nav nav-collapse">
                 <li>
-                  <a href="{{ route('user.wallet.create') }}">
-                    <span class="sub-item">Add Wallet</span>
+                  <a href="{{ route('admin.user.create') }}">
+                    <span class="sub-item">Register User</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.wallet.index') }}">
-                    <span class="sub-item">View Wallets</span>
+                  <a href="{{ route('admin.user.index') }}">
+                    <span class="sub-item">View Users</span>
                   </a>
                 </li>
 
               </ul>
             </div>
           </li>
+
+
 
           <li class="nav-section">
             <span class="sidebar-mini-icon">
@@ -87,12 +89,17 @@
               <ul class="nav nav-collapse">
                 <li>
                   <a href="{{ route('user.deposit.create') }}">
-                    <span class="sub-item">Deposit</span>
+                    <span class="sub-item">Pending Deposits</span>
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('user.deposit.index') }}">
-                    <span class="sub-item">Deposit History</span>
+                    <span class="sub-item">Approved Deposits</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ route('user.deposit.index') }}">
+                    <span class="sub-item">All Deposits</span>
                   </a>
                 </li>
 
@@ -117,12 +124,17 @@
               <ul class="nav nav-collapse">
                 <li>
                   <a href="{{ route('user.withdraw.create') }}">
-                    <span class="sub-item">Withdraw</span>
+                    <span class="sub-item">Pending Withdrawals</span>
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('user.withdraw.index') }}">
-                    <span class="sub-item">Withdrawal History</span>
+                    <span class="sub-item">Completed Withdrawal</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ route('user.withdraw.index') }}">
+                    <span class="sub-item">All Withdrawal</span>
                   </a>
                 </li>
 
@@ -147,78 +159,29 @@
               <ul class="nav nav-collapse">
                 <li>
                   <a href="{{ route('user.investment.plan') }}">
-                    <span class="sub-item">Invest</span>
+                    <span class="sub-item">Investment plans</span>
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('user.investment.index') }}">
-                    <span class="sub-item">Investment History</span>
+                    <span class="sub-item">Active Investments</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ route('user.investment.index') }}">
+                    <span class="sub-item">Completed Investments</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ route('user.investment.index') }}">
+                    <span class="sub-item">All Investments</span>
                   </a>
                 </li>
               </ul>
             </div>
           </li>
 
-          {{-- <li class="nav-section">
-            <span class="sidebar-mini-icon">
-              <i class="fa fa-ellipsis-h"></i>
-            </span>
-            <h4 class="text-section">Transactions</h4>
-          </li>
 
-          <li class="nav-item">
-            <a data-bs-toggle="collapse" href="#transactions">
-              <i class="fas fa-money-check-alt"></i>
-              <p>Transactions</p>
-              <span class="caret"></span>
-            </a>
-            <div class="collapse" id="transactions">
-              <ul class="nav nav-collapse">
-                <li>
-                  <a href="{{ route('user.transaction.create') }}">
-                    <span class="sub-item">Deposit</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="{{ route('user.transaction.create') }}">
-                    <span class="sub-item">Withdrawal</span>
-                  </a>
-                </li>
-
-
-              </ul>
-            </div>
-          </li> --}}
-
-          <li class="nav-section">
-            <span class="sidebar-mini-icon">
-              <i class="fa fa-ellipsis-h"></i>
-            </span>
-            <h4 class="text-section">Referrals</h4>
-          </li>
-
-          <li class="nav-item">
-            <a href="{{ route('user.referral.index') }}">
-              <i class="fas fa-users"></i>
-              <p>Referrals</p>
-            </a>
-          </li>
-
-          <li class="nav-section">
-            <span class="sidebar-mini-icon">
-              <i class="fa fa-ellipsis-h"></i>
-            </span>
-            <h4 class="text-section">KYC</h4>
-          </li>
-
-          <li class="nav-item">
-            <a  href="{{ route('user.kyc.create') }}">
-              <i class="fas fa-user"></i>
-              <p>KYC</p>
-            </a>
-          </li>
-
-        {{-- ending --}}
         </ul>
       </div>
     </div>

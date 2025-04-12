@@ -12,7 +12,9 @@
       href="{{ asset('assets/img/kaiadmin/favicon.ico') }}"
       type="image/x-icon"
     />
-
+    <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
     <!-- Fonts and icons -->
     <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js') }}"></script>
     <script>
@@ -44,7 +46,12 @@
   <body>
     <div class="wrapper">
       <!-- Sidebar -->
-        @include('components.userSideBar')
+        @if (Auth::user()->role != "admin")
+            @include('components.userSideBar')
+        @else
+            @include('components.adminSideBar')
+        @endif
+
       <!-- End Sidebar -->
 
       <div class="main-panel">
@@ -211,9 +218,8 @@
 
     </div>
     <!--   Core JS Files   -->
-    <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
+
+
 
     <!-- jQuery Scrollbar -->
     <script src="{{ asset('assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>

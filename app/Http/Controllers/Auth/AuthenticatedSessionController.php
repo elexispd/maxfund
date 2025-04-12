@@ -24,11 +24,33 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        // First attempt authentication
         $request->authenticate();
 
+        // Get the authenticated user
+        $user = Auth::user();
+
+        // Check if user is inactive
+        if ($user->status === 'inactive') {
+            // Log the user out immediately
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            // Return with error message
+            return back()->withErrors([
+                'email' => 'Your account has been deactivated. Please contact support.',
+            ]);
+        }
+
+        // Proceed with normal login for active users
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        if ($user->role == "admin") {
+            return redirect()->intended(route('admin.dashboard', absolute: false));
+        } else {
+            return redirect()->intended(route('dashboard', absolute: false));
+        }
     }
 
     /**
