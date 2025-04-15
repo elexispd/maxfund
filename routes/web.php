@@ -99,18 +99,18 @@ Route::middleware('auth')->group(function () {
             Route::get('/', [AdminDepositController::class, 'index'])->name('admin.deposit.index');
             Route::put('approve/{deposit}', [AdminDepositController::class, 'approve'])->name('admin.deposits.approve');
             Route::put('reject/{deposit}', [AdminDepositController::class, 'reject'])->name('admin.deposits.reject');
-
         });
 
         Route::prefix('/investments')->group(function () {
             Route::get('/', [AdminInvestmentController::class, 'index'])->name('admin.investment.index');
+            Route::get('/plans', [AdminInvestmentController::class, 'plans'])->name('admin.investment.plan');
             Route::get('/{investment}', [AdminInvestmentController::class, 'show'])->name('admin.investment.show');
         });
 
         Route::prefix('/withdraw')->group(function () {
             Route::get('/', [AdminWithdrawalController::class, 'index'])->name('admin.withdraw.index');
-            Route::get('/{id}', [AdminWithdrawalController::class, 'show'])->name('admin.withdraw.show');
-            Route::post('/{id}', [AdminWithdrawalController::class, 'update'])->name('admin.withdraw.update');
+            Route::put('/approve/{withdraw}', [AdminWithdrawalController::class, 'approve'])->name('admin.withdraw.approve');
+            Route::put('/reject/{withdraw}', [AdminWithdrawalController::class, 'reject'])->name('admin.withdraw.reject');
         });
 
         Route::prefix('/referrals')->group(function () {

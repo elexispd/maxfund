@@ -6,14 +6,25 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">My Investments</h4>
-                    <p class="text-muted mb-0">All your active and completed investments</p>
+                    <h4 class="card-title"> Investments</h4>
+                    <p class="text-muted mb-0">
+                        @switch($status)
+                        @case('active')
+                            Allactive investment appear here
+                            @break
+                        @case('completed')
+                            All completed investments appear here
+                            @break
+                        @default
+                            All investments appear here
+                    @endswitch
+                    </p>
                 </div>
                 <div class="card-body">
-                    @if($investments->count() == 0)
+                    @if($investments->count() === 0)
                         <div class="alert alert-info">
-                            You haven't made any investments yet.
-                            <a href="{{ route('user.investment.plan') }}" class="alert-link">
+                            Thereare no investments yet.
+                            <a href="{{ route('admin.investment.plan') }}" class="alert-link">
                                 Browse investment plans
                             </a>
                         </div>
@@ -33,6 +44,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach($investments as $investment)
+
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $investment->plan->name }}</td>
@@ -53,6 +65,7 @@
                                 </tbody>
                             </table>
                         </div>
+
 
                     @endif
                 </div>

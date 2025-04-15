@@ -128,17 +128,17 @@
             <div class="collapse" id="withdraw">
               <ul class="nav nav-collapse">
                 <li>
-                  <a href="{{ route('user.withdraw.create') }}">
+                  <a href="{{ route('admin.withdraw.index') }}?status=pending">
                     <span class="sub-item">Pending Withdrawals</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.withdraw.index') }}">
-                    <span class="sub-item">Completed Withdrawal</span>
+                  <a href="{{ route('admin.withdraw.index') }}?status=approved">
+                    <span class="sub-item">Approved Withdrawal</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.withdraw.index') }}">
+                  <a href="{{ route('admin.withdraw.index') }}">
                     <span class="sub-item">All Withdrawal</span>
                   </a>
                 </li>
@@ -163,22 +163,22 @@
             <div class="collapse" id="investment">
               <ul class="nav nav-collapse">
                 <li>
-                  <a href="{{ route('user.investment.plan') }}">
+                  <a href="{{ route('admin.investment.plan') }}">
                     <span class="sub-item">Investment plans</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.investment.index') }}">
+                  <a href="{{ route('admin.investment.index') }}">
                     <span class="sub-item">Active Investments</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.investment.index') }}">
+                  <a href="{{ route('admin.investment.index') }}">
                     <span class="sub-item">Completed Investments</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('user.investment.index') }}">
+                  <a href="{{ route('admin.investment.index') }}">
                     <span class="sub-item">All Investments</span>
                   </a>
                 </li>

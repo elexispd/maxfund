@@ -15,8 +15,7 @@ class InvestmentController extends Controller
     {
         $investments = Auth::user()->investments()
             ->with('plan') // Eager load the plan relationship
-            ->latest()
-            ->paginate(10); // 10 items per page
+            ->latest();
 
         return view('investments.index', compact('investments'));
     }
