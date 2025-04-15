@@ -44,6 +44,12 @@ class ProfileController extends Controller
         return redirect()->route('user.kyc.create')
             ->with('success', 'KYC information updated successfully!');
     }
+    public function show(): View
+    {
+        return view('profile.show', [
+            'user' => auth()->user(),
+        ]);
+    }
     public function edit(Request $request): View
     {
         return view('profile.edit', [

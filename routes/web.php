@@ -27,7 +27,8 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/{user}edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
@@ -114,7 +115,7 @@ Route::middleware('auth')->group(function () {
         });
 
         Route::prefix('/referrals')->group(function () {
-            Route::get('/{user_id}', [AdminReferralController::class, 'index'])->name('admin.referral.index');
+            Route::get('/{user}', [AdminReferralController::class, 'index'])->name('admin.referral.index');
         });
 
 

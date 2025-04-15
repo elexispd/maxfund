@@ -168,12 +168,12 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('admin.investment.index') }}">
+                  <a href="{{ route('admin.investment.index') }}?status=active">
                     <span class="sub-item">Active Investments</span>
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('admin.investment.index') }}">
+                  <a href="{{ route('admin.investment.index') }}?status=completed">
                     <span class="sub-item">Completed Investments</span>
                   </a>
                 </li>

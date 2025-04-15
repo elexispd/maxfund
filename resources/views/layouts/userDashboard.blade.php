@@ -164,7 +164,7 @@
                             <h4> {{ Auth::user()->name }}</h4>
                             <p class="text-muted"> {{ Auth::user()->email }}</p>
                             <a
-                              href="#"
+                              href="{{ route('profile.show') }}"
                               class="btn btn-xs btn-secondary btn-sm"
                               >View Profile</a
                             >
@@ -173,9 +173,7 @@
                       </li>
                       <li>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">My Profile</a>
-                        <a class="dropdown-item" href="#">My Balance</a>
-                        <div class="dropdown-divider"></div>
+
                         <a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

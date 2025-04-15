@@ -37,6 +37,10 @@
                             name="password_confirmation" required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+
+            <x-text-input id="ref" class="block mt-1 w-full"
+                type="text"
+                name="ref" value="{{ request()->query('ref') }}" />
         </div>
 
         <div class="flex items-center justify-end mt-4">

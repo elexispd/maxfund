@@ -9,16 +9,23 @@ use App\Models\InvestmentPlan;
 
 class InvestmentController extends Controller
 {
-    public function index(Request $request) {
-        $status = $request->validate([
-            'status' => 'nullable|in:pending,approved,rejected'
-        ])['status'] ?? null;
-        $investments = Investment::latest()
-            ->with('plan')
-            ->get();
+    public function index(Request $request)
+{
+    $validated = $request->validate([
+        'status' => 'nullable|in:active,completed'
+    ]);
 
-        return view('admin.investments.index', compact('investments','status'));
-    }
+    $status = $validated['status'] ?? null;
+
+    $investments = Investment::when($status, function ($query, $status) {
+            $query->where('status', $status);
+        })
+        ->with('plan')
+        ->latest()
+        ->get();
+
+    return view('admin.investments.index', compact('investments', 'status'));
+}
 
     public function plans() {
         $investmentPlans = InvestmentPlan::all();

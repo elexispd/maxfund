@@ -168,7 +168,7 @@
           </div>
           <div class="card-body pb-0">
             <div class="mb-4 mt-2">
-              <h1> <a> {{ config('app.url') }}//{{ Auth::user()->referral_code }}</a> </h1>
+              <h1> <a> {{ config('app.url') }}/register?ref={{ Auth::user()->referral_code }}</a> </h1>
             </div>
 
           </div>
