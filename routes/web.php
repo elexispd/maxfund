@@ -15,7 +15,8 @@ use App\Http\Controllers\Admin\ReferralController as AdminReferralController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\WithdrawController as AdminWithdrawalController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
-
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\MenuConroller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -127,5 +128,17 @@ Route::middleware('auth')->group(function () {
 
 
 });
+
+
+
+Route::get('/creed', function () {
+    return view('index'); // index.blade.php in resources/views
+});
+
+Route::get('/services', [MenuConroller::class, 'services'])->name('services');
+Route::get('/about', [MenuConroller::class, 'about'])->name('about');
+Route::get('/faq', [MenuConroller::class, 'faq'])->name('faq');
+Route::get('/contact', [MenuConroller::class, 'contact'])->name('contact');
+Route::get('/terms', [MenuConroller::class, 'terms'])->name('terms');
 
 require __DIR__.'/auth.php';

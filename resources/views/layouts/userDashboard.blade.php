@@ -174,7 +174,7 @@
                       <li>
                         <div class="dropdown-divider"></div>
 
-                        <a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
+                        <a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="cursor: pointer" >Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>

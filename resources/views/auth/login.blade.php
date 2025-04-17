@@ -1,47 +1,79 @@
-<x-guest-layout>
+<?php
+
+use App\Livewire\Forms\LoginForm;
+use Illuminate\Support\Facades\Session;
+use Livewire\Attributes\Layout;
+use Livewire\Volt\Component;
+
+new #[Layout('layouts.guest')] class extends Component
+{
+    public LoginForm $form;
+
+    /**
+     * Handle an incoming authentication request.
+     */
+    public function login(): void
+    {
+        $this->validate();
+
+        $this->form->authenticate();
+
+        Session::regenerate();
+
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+    }
+}; ?>
+
+<div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<!--=========== breadcrumb Section End =========-->
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+@include('partials.header-login')
+<section class="contact-page-wrap section-padding">
+    <section class="about-style2-area card ">
+        <div class="container">
+                 <h3 class="card-header text-info" style="font-size: 2.5rem !important"> Access your account </h3>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+                <form wire:login method="post" class="card-body" id="login">
+                    @csrf
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+                    <div class="form-group">
+                        <label>Email address: </label>
+                        <input type="email" class="form-control" name="email" id="email" value='' placeholder="Email address">
+                        @error('email')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
+                    <div class="form-group">
+                    <label>Enter trading password: </label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                        @error('password')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <br/>
+                        <button name="submit" class="btn btn-info">Login</button>
+                    </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
 
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+                </form>
+                <div class="card-footer">
+                         <a href="{{route('register')}}">Don't have an account? Click here to register. </a> Forgot Password? <a href="{{route('password.request')}}"> Click here to recover password! </a>
+                    </div>
+
+
+          </div>
+        </section>
+
+</section>
+
+
+
+
+</div>
+@include('partials.footer-register')
