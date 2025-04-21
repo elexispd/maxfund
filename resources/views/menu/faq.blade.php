@@ -6,7 +6,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8" />
-        <title>Creed Profit Alliance - Building worldclass investment portfolio with good returns.</title>
+        <title>Maxfund - Building worldclass investment portfolio with good returns.</title>
         <meta name="description" content="" />
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -37,11 +37,11 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfund" class="letters-loading"> Maxfund </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -49,37 +49,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#147d7a727b54776671717064667b727d607578787d757a77713a777b79"> <span class="__cf_email__" data-cfemail="c7aea9a1a887a4b5a2a2a3b7b5a8a1aeb3a6ababaea6a9a4a2e9a4a8aa">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         @include('partials.header')
             <!-- Header Section Start -->
 @include('partials.navbar')
         </header>
@@ -121,7 +91,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseOne"
                                         >
-                                            What types of investment products and services does Creed Profit Alliance offer?
+                                            What types of investment products and services does Maxfund offer?
                                         </button>
                                     </h2>
                                     <div
@@ -133,7 +103,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Creed Profit Alliance offers a wide range of investment products and services, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, high yield savings, and loans.
+												Maxfund offers a wide range of investment products and services, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, high yield savings, and loans.
 												</strong
                                             >
                                         </div>
@@ -149,7 +119,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseTwo"
                                         >
-                                            What is the minimum investment required to open an account with Creed Profit Alliance?
+                                            What is the minimum investment required to open an account with Maxfund?
                                         </button>
                                     </h2>
                                     <div
@@ -161,7 +131,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												The minimum investment required to open an account with Creed Profit Alliance varies depending on the investment product or service you choose. Please contact us for more information.
+												The minimum investment required to open an account with Maxfund varies depending on the investment product or service you choose. Please contact us for more information.
 												</strong
                                             >
                                         </div>
@@ -177,7 +147,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseThree"
                                         >
-                                            Can Creed Profit Alliance help me create a personalized investment plan?
+                                            Can Maxfund help me create a personalized investment plan?
                                         </button>
                                     </h2>
                                     <div
@@ -205,7 +175,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFour"
                                         >
-                                            How does Creed Profit Alliance help manage risk for investors?
+                                            How does Maxfund help manage risk for investors?
                                         </button>
                                     </h2>
                                     <div
@@ -217,7 +187,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Creed Profit Alliance uses a range of risk management strategies to help minimize risk for investors, including diversification, asset allocation, and ongoing portfolio monitoring and analysis.
+												Maxfund uses a range of risk management strategies to help minimize risk for investors, including diversification, asset allocation, and ongoing portfolio monitoring and analysis.
 												</strong
                                             >
                                         </div>
@@ -233,7 +203,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFive"
                                         >
-                                            Is my personal and financial information safe with Creed Profit Alliance?
+                                            Is my personal and financial information safe with Maxfund?
                                         </button>
                                     </h2>
                                     <div
@@ -245,7 +215,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Yes, Creed Profit Alliance takes the privacy and security of our clients' personal and financial information very seriously. We use industry-standard security measures to protect your information and adhere to strict privacy policies to ensure the confidentiality of your data.
+												Yes, Maxfund takes the privacy and security of our clients' personal and financial information very seriously. We use industry-standard security measures to protect your information and adhere to strict privacy policies to ensure the confidentiality of your data.
 												</strong
                                             >
                                         </div>
@@ -258,7 +228,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="sc-essential-image text-end sc-pl-40 sc-md-pl-0 sc-md-pt-50">
-                            <img src="assets/images/project/essential-bg.jpg" alt="Essential" />
+                            <img src="assets/images/project/max11.jpg" alt="Essential" class="mt-3 mb-3" />
 							<div class="">
 
 

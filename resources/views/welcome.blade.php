@@ -6,7 +6,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8" />
-        <title>Creed Profit Alliance - Building worldclass investment portfolio with good returns.</title>
+        <title>Maxfund - Building worldclass investment portfolio with good returns.</title>
         <meta name="description" content="" />
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -37,11 +37,11 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfund" class="letters-loading"> Maxfund </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -49,37 +49,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#61080f070e21021304040511130e070815000d0d08000f02044f020e0c"> <span class="__cf_email__" data-cfemail="f69f989099b69584939392868499909f82979a9a9f97989593d895999b">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          @include('partials.header')
             <!-- Header Section Start -->
 @include('partials.navbar')
         </header>
@@ -89,83 +59,11 @@
         <!--========== Header Section End ==============-->
 
   <!--=========== Slider Section Start =========-->
-        <section class="sc-slider-section sc-slider-style2">
-            <div class="swiper sc-slider-2">
-                <div class="swiper-wrapper">
-                    <!-- Slide One -->
-                    <div class="swiper-slide">
-                        <div class="slide-image-2 sc-image-layer"></div>
-                        <div class="container position-relative">
-                            <div class="sc-slider-content p-z-idex">
-                                <div class="sc-slider-subtitle">Invest with confidence</div>
-                                <h1 class="slider-title white-color sc-mb-25 sc-sm-mb-15">
-                                    Let Creed Profit Alliance help you achieve your financial goals
-                                </h1>
-                                <div class="slider-desc white-dark-color sc-mb-40 sc-sm-mb-25">
-                                    Invest in stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, and high yield savings and loans for both personal and business purposes.
-                                </div>
-                                <div class="slider-btn-area d-flex align-items-center">
-                                    <div class="sc-slider-btn">
-                                        <a class="sc-primary-btn p-z-idex2" href="register.html"> Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="shape-overly-one"></div>
-                        </div>
-                    </div>
-
-                    <!-- Slide two -->
-                    <div class="swiper-slide">
-                        <div class="slide-image-4 sc-image-layer"></div>
-                        <div class="container position-relative">
-                            <div class="sc-slider-content p-z-idex">
-                                <div class="sc-slider-subtitle">Diversify your portfolio</div>
-                                <h1 class="slider-title white-color sc-mb-25 sc-sm-mb-15">
-                                     Explore a wide range of investment options with Creed Profit Alliance                                </h1>
-                                <div class="slider-desc white-dark-color sc-mb-40 sc-sm-mb-25">
-                                    We offer a diverse range of investment products to suit the unique needs of our clients.
-                                </div>
-                                <div class="slider-btn-area d-flex align-items-center">
-                                    <div class="sc-slider-btn">
-                                        <a class="sc-primary-btn p-z-idex2" href="register.html"> Get Started</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="shape-overly-one"></div>
-                        </div>
-                    </div>
-                    <!-- Slide three -->
-                    <div class="swiper-slide">
-                        <div class="slide-image-5 sc-image-layer"></div>
-                        <div class="container position-relative">
-                            <div class="sc-slider-content p-z-idex">
-                                <div class="sc-slider-subtitle">Personalized investment solutions</div>
-                                <h1 class="slider-title white-color sc-mb-25 sc-sm-mb-15">
-                                    Let Creed Profit Alliance help you create a personalized investment strategy
-                                </h1>
-                                <div class="slider-desc white-dark-color sc-mb-40 sc-sm-mb-25">
-                                    We believe that every individual has unique financial goals and investment needs.
-                                </div>
-                                <div class="slider-btn-area d-flex align-items-center">
-                                    <div class="sc-slider-btn">
-                                        <a class="sc-primary-btn p-z-idex2" href="#"> Get Started</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="shape-overly-one"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </section>
+@include('partials.slider')
         <!--=========== Slider Section End =========-->
 
 		 <!--=========== statistics Section Start =========-->
-        <section class="sc-statistics-section-area gray-bg-color sc-pb-80">
+        <section class="sc-statistics-section-area gray-bg-color sc-pb-80" style="background: black">
             <div class="container">
                 <div class="sc-statistics-style white-bg-color">
                     <div class="row">
@@ -185,7 +83,7 @@
                                 >
                                     <img
                                         class="sc-border-radius"
-                                        src="assets/images/project/sc-success.jpg"
+                                        src="assets/images/project/max6.jpg"
                                         alt="Statistics"
                                     />
                                 </div>
@@ -246,14 +144,14 @@
         <!--=========== statistics Section End =========-->
 
 		 <!--=========== service section Start =========-->
-        <div class="sc-service-section-two sc-pb-95 sc-md-pb-50 sc-pt-100 sc-md-pt-80">
+        <div class="sc-service-section-two sc-pb-95 sc-md-pb-50 sc-pt-100 sc-md-pt-80" style="background: blac">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                         <div class="sc-heading-area sc-mb-35 text-center">
-                            <span class="sub-title"><i class="icon-line"></i> Explore Our Services</span>
+                            <span class="sub-title" "><i class="icon-line"></i> Explore Our Services</span>
 
-                            <h2 class="title">
+                            <h2 class="title" ">
                                Discover the range of investment services we offer to help you achieve your <span class="primary-color italic"> financial goals.</span>
                             </h2>
                         </div>
@@ -286,13 +184,13 @@
                                 </div>
                             </div>
                             <div class="sc-service-text">
-                                <h4><a class="title" href="services.html">Multi-Asset Management</a></h4>
+                                <h4><a class="title" href="{{route('services')}}">Multi-Asset Management</a></h4>
                                 <p class="des sc-mb-25">
                                     Invest in a diverse range of asset classes, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, and high yield savings and loans, to help you achieve your financial goals.
                                 </p>
                             </div>
                             <div class="sc-service-btn">
-                                <a class="sc-transparent-btn" href="services.html">Read More</a>
+                                <a class="sc-transparent-btn" href="{{route('services')}}">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -306,7 +204,7 @@
                             <div class="sc-service-text">
                                 <h4><a class="title" href="services.html">Wealth Management</a></h4>
                                 <p class="des sc-mb-25">
-                                    Let Creed Profit Alliance help you manage your wealth with our comprehensive wealth management services. Our investment professionals will work closely with you to develop an investment strategy that aligns with your goals and objectives.
+                                    Let Maxfund help you manage your wealth with our comprehensive wealth management services. Our investment professionals will work closely with you to develop an investment strategy that aligns with your goals and objectives.
                                 </p>
                             </div>
                             <div class="sc-service-btn">
@@ -320,13 +218,13 @@
                                 <i class="icon-bussness"></i>
                             </div>
                             <div class="sc-service-text">
-                                <h4><a class="title" href="services.html">Business Solutions</a></h4>
+                                <h4><a class="title" href="{{route('services')}}">Business Solutions</a></h4>
                                 <p class="des sc-mb-25">
-                                    Creed Profit Alliance also offers a range of business solutions, including high yield savings and loans, to help you manage your business finances and achieve your business goals. Our investment professionals will work closely with you to understand your business needs and create a customized solution that meets your objectives.
+                                    Maxfund also offers a range of business solutions, including high yield savings and loans, to help you manage your business finances and achieve your business goals. Our investment professionals will work closely with you to understand your business needs and create a customized solution that meets your objectives.
                                 </p>
                             </div>
                             <div class="sc-service-btn">
-                                <a class="sc-transparent-btn" href="services.html">Read More</a>
+                                <a class="sc-transparent-btn" href="{{route('services')}}">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +240,7 @@
                     class="sc-about-content-area sc-pt-40 sc-pb-40 position-relative p-z-idex d-flex align-items-center sc-md-pt-80 sc-md-pb-80"
                 >
                     <div class="sc-about-bg-image" data-sal="slide-right" data-sal-duration="800">
-                        <img src="assets/images/about/ab-image1.jpg" alt="About" />
+                        <img src="assets/images/about/max8.jpg" alt="About" />
                     </div>
                     <div
                         class="sc-about-text-box sc-md-mt-50 sc-pl-30 sc-md-pl-0"
@@ -355,7 +253,7 @@
                                 Experience the Power of Informed Investing
                             </h2>
                             <p class="des">
-                                Creed Profit Alliance is a multi-asset management company that offers a wide range of investment products and personalized services to help you achieve your financial goals.
+                                Maxfund is a multi-asset management company that offers a wide range of investment products and personalized services to help you achieve your financial goals.
                             </p>
 
                         </div>
@@ -402,12 +300,12 @@
         </div>
         <!--=========== about Section End =========-->
 		   <!--=========== popular section Start =========-->
-        <div class="sc-price-section-area sc-pt-100 sc-pb-120 sc-md-pt-80 sc-md-pb-100" id="plans">
-            <div class="container sc-sm-pl-25 sc-sm-pr-25">
+        <div class="sc-price-section-area sc-pt-100 sc-pb-120 sc-md-pt-80 sc-md-pb-100" id="plans" style="background: black">
+            <div class="container sc-sm-pl-25 sc-sm-pr-25" style="background: #fff">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                         <div class="sc-heading-area sc-mb-75 text-center">
-                            <span class="sub-title"><i class="icon-line"></i> Explore Our Investment Plans</span>
+                            <span class="sub-title"style="margin-top:1.3rem" ><i class="icon-line"></i> Explore Our Investment Plans</span>
                             <h2 class="title">
                                 Invest in Your Future with Confidence through our Diverse Range of <span class="primary-color italic">Investment</span> Products.
                             </h2>
@@ -416,7 +314,7 @@
                 </div>
                 <div class="row">
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -447,7 +345,7 @@
                                     </ul>
                                 </div>
                                 <div class="sc-price-button">
-                                    <a class="sc-price-btn" href="login.html">INVEST </a>
+                                    <a class="sc-price-btn" href="{{route('login')}}">INVEST </a>
                                 </div>
                             </div>
                             <div class="price-shape-one"></div>
@@ -457,7 +355,7 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -498,7 +396,7 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -539,7 +437,7 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -580,7 +478,7 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -621,7 +519,7 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -668,7 +566,7 @@
         <!--=========== popular section End =========-->
 
         <!--=========== testimonial section Start =========-->
-        <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80">
+        <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80" style="background: black">
             <div class="container">
                 <div class="row">
 					<div class="col-md-6">
@@ -832,12 +730,12 @@
         </div>
         <!--=========== testimonial section End =========-->
 		 <!--=========== testimonial section Start =========-->
-        <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80">
+        <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80" style="background: blac">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                         <div class="testimonial-slider-image">
-                            <img src="assets/images/testimonial/slider-image.png" alt="Testimonial" />
+                            <img src="assets/images/testimonial/md1.jpg" alt="Testimonial" style="border-radius: 50%; aspect-ratio: 1/1;"/>
                         </div>
                     </div>
                     <div class="col-lg-6 sc-md-mt-50" data-sal="slide-left" data-sal-duration="800">
@@ -846,7 +744,7 @@
                                 <span class="sub-title"><i class="icon-line"></i> Client Feedback</span>
 
                                 <h2 class="title">
-                                    Happy Client Feedback <span class="primary-color italic">About</span> Our Service
+                                 <span style="color: #fff"> Happy Client Feedback <span class="primary-color italic">About</span> Our Service </span>
                                 </h2>
                             </div>
                             <div class="swiper sc-tes-slider">
@@ -854,7 +752,7 @@
                                     <div class="swiper-slide">
                                         <div class="sc-testimonial-content">
                                             <p class="des sc-mb-40">
-                                                I was hesitant to invest my money at first, but Creed Profit Alliance's investment professionals made the process easy and understandable. They took the time to explain my options and helped me create an investment plan that aligned with my goals. I am happy to say that my investments have performed well and I have seen a significant return on my investment. I would definitely recommend Creed Profit Alliance to anyone looking for expert investment advice.
+                                                I was hesitant to invest my money at first, but Maxfund's investment professionals made the process easy and understandable. They took the time to explain my options and helped me create an investment plan that aligned with my goals. I am happy to say that my investments have performed well and I have seen a significant return on my investment. I would definitely recommend Maxfund to anyone looking for expert investment advice.
                                             </p>
                                             <div class="sc-slider-auother d-flex align-items-center">
 
@@ -868,7 +766,7 @@
                                     <div class="swiper-slide">
                                         <div class="sc-testimonial-content">
                                             <p class="des sc-mb-40">
-                                                I have been using Creed Profit Alliance's services for several years now, and I have been extremely impressed with their knowledge and expertise. They offer a diverse range of investment products and services that have helped me achieve my financial goals. I appreciate their attention to detail and commitment to providing excellent customer service.
+                                                I have been using Maxfund's services for several years now, and I have been extremely impressed with their knowledge and expertise. They offer a diverse range of investment products and services that have helped me achieve my financial goals. I appreciate their attention to detail and commitment to providing excellent customer service.
                                             </p>
                                             <div class="sc-slider-auother d-flex align-items-center">
 
@@ -882,7 +780,7 @@
                                     <div class="swiper-slide">
                                         <div class="sc-testimonial-content">
                                             <p class="des sc-mb-40">
-                                                Thanks to Creed Profit Alliance, I finally feel like my investments are working for me. Their team of investment professionals took the time to understand my goals and risk tolerance and created a personalized investment plan that has helped me grow my portfolio significantly. I would highly recommend Creed Profit Alliance to anyone who wants to invest with confidence.
+                                                Thanks to Maxfund, I finally feel like my investments are working for me. Their team of investment professionals took the time to understand my goals and risk tolerance and created a personalized investment plan that has helped me grow my portfolio significantly. I would highly recommend Maxfund to anyone who wants to invest with confidence.
                                             </p>
                                             <div class="sc-slider-auother d-flex align-items-center">
 
@@ -928,7 +826,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseOne"
                                         >
-                                            What types of investment products and services does Creed Profit Alliance offer?
+                                            What types of investment products and services does Maxfund offer?
                                         </button>
                                     </h2>
                                     <div
@@ -940,7 +838,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Creed Profit Alliance offers a wide range of investment products and services, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, high yield savings, and loans.
+												Maxfund offers a wide range of investment products and services, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, high yield savings, and loans.
 												</strong
                                             >
                                         </div>
@@ -956,7 +854,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseTwo"
                                         >
-                                            What is the minimum investment required to open an account with Creed Profit Alliance?
+                                            What is the minimum investment required to open an account with Maxfund?
                                         </button>
                                     </h2>
                                     <div
@@ -968,7 +866,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												The minimum investment required to open an account with Creed Profit Alliance varies depending on the investment product or service you choose. Please contact us for more information.
+												The minimum investment required to open an account with Maxfund varies depending on the investment product or service you choose. Please contact us for more information.
 												</strong
                                             >
                                         </div>
@@ -984,7 +882,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseThree"
                                         >
-                                            Can Creed Profit Alliance help me create a personalized investment plan?
+                                            Can Maxfund help me create a personalized investment plan?
                                         </button>
                                     </h2>
                                     <div
@@ -1012,7 +910,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFour"
                                         >
-                                            How does Creed Profit Alliance help manage risk for investors?
+                                            How does Maxfund help manage risk for investors?
                                         </button>
                                     </h2>
                                     <div
@@ -1024,7 +922,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Creed Profit Alliance uses a range of risk management strategies to help minimize risk for investors, including diversification, asset allocation, and ongoing portfolio monitoring and analysis.
+												Maxfund uses a range of risk management strategies to help minimize risk for investors, including diversification, asset allocation, and ongoing portfolio monitoring and analysis.
 												</strong
                                             >
                                         </div>
@@ -1036,7 +934,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="sc-essential-image text-end sc-pl-40 sc-md-pl-0 sc-md-pt-50">
-                            <img src="assets/images/project/essential-bg.jpg" alt="Essential" />
+                            <img src="assets/images/project/max7.jpg" alt="Essential" />
 							<div class="">
 							 <br/>
 							<div class="accordion sc-faq-style" id="accordionExample">
@@ -1051,7 +949,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFive"
                                         >
-                                            Is my personal and financial information safe with Creed Profit Alliance?
+                                            Is my personal and financial information safe with Maxfund?
                                         </button>
                                     </h2>
                                     <div
@@ -1063,7 +961,7 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Yes, Creed Profit Alliance takes the privacy and security of our clients' personal and financial information very seriously. We use industry-standard security measures to protect your information and adhere to strict privacy policies to ensure the confidentiality of your data.
+												Yes, Maxfund takes the privacy and security of our clients' personal and financial information very seriously. We use industry-standard security measures to protect your information and adhere to strict privacy policies to ensure the confidentiality of your data.
 												</strong
                                             >
                                         </div>

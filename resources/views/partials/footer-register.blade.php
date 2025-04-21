@@ -127,7 +127,7 @@
         </ul>
     </div>
                 <div class="sc-canva-button">
-        <a class="sc-primary-btn" href="register.html">Get Started</a>
+        <a class="sc-primary-btn" href="{{route('register')}}">Get Started</a>
     </div>
             </div>
 <!--Sc Offcanvas Area End-->

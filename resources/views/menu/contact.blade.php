@@ -6,7 +6,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8" />
-        <title>Creed Profit Alliance - Building worldclass investment portfolio with good returns.</title>
+        <title>Maxfund - Building worldclass investment portfolio with good returns.</title>
         <meta name="description" content="" />
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -37,11 +37,11 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfund" class="letters-loading"> Maxfund </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -49,37 +49,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#8ee7e0e8e1ceedfcebebeafefce1e8e7faefe2e2e7efe0edeba0ede1e3"> <span class="__cf_email__" data-cfemail="127b7c747d52716077777662607d747b66737e7e7b737c71773c717d7f">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@include('partials.header')
             <!-- Header Section Start -->
         @include('partials.navbar')
         </header>
@@ -134,7 +104,7 @@
                         <div class="contact-box sc-md-mb-10 sc-md-mt-45">
                             <h4 class="contact-title sc-pb-15">Get in Touch</h4>
                             <div class="form-box">
-                                <textarea id="message" name="message" placeholder="Write short subject" disabled></textarea>
+                                <textarea id="message" name="message" placeholder="Write short subject" style="resize: none"></textarea>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -146,7 +116,7 @@
                                             name="name"
                                             placeholder="Full name *"
                                             required=""
-											disabled
+style="resize: none"
                                         />
                                     </div>
                                 </div>
@@ -158,7 +128,7 @@
                                         name="email"
                                         placeholder="Your email *"
                                         required=""
-										disabled
+style="resize: none"
                                     />
                                 </div>
                                 <div class="col-md-6">
@@ -169,7 +139,7 @@
                                             id="phone"
                                             name="phone"
                                             placeholder="Your phone"
-											disabled
+style="resize: none"
                                         />
                                     </div>
                                 </div>
@@ -180,7 +150,7 @@
                                         id="subject"
                                         name="subject"
                                         placeholder="Subject"
-										disabled
+style="resize: none"
                                     />
                                 </div>
                             </div>
@@ -189,7 +159,7 @@
                                 time I comment.
                             </div>
                             <div class="submit-button sc-primary-btn">
-                                <input type="submit" value="Send Message" disabled />
+                                <input type="submit" value="Send Message" style="resize: none" />
                             </div>
                         </div>
                     </div>

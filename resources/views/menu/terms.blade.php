@@ -6,7 +6,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8" />
-        <title>Creed Profit Alliance - Building worldclass investment portfolio with good returns.</title>
+        <title>Maxfund - Building worldclass investment portfolio with good returns.</title>
         <meta name="description" content="" />
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -37,11 +37,11 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfund" class="letters-loading"> Maxfund </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -49,37 +49,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#c9a0a7afa689aabbacacadb9bba6afa0bda8a5a5a0a8a7aaace7aaa6a4"> <span class="__cf_email__" data-cfemail="573e393138173425323233272538313e23363b3b3e363934327934383a">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@include('partials.header')
             <!-- Header Section Start -->
 @include('partials.navbar')
         </header>
@@ -107,44 +77,44 @@
             <div class="container">
 			<br/>
 				<p>
-					Welcome to the Creed Profit Alliance website. These terms and conditions outline the rules and regulations for the use of our website.
+					Welcome to the Maxfund website. These terms and conditions outline the rules and regulations for the use of our website.
 				</p>
 				<p>
 					By accessing this website, we assume you accept these terms and conditions in full. If you disagree with these terms and conditions, you must not use this website.
 				</p>
 				<p>
-					The following terminology applies to these terms and conditions: "Client", "You" and "Your" refers to you, the person accessing this website and accepting the terms and conditions. "Creed Profit Alliance" "Ourselves", "We" and "Us", refers to our company. "Party", "Parties", or "Us", refers to both the Client and ourselves, or either the Client or ourselves.
+					The following terminology applies to these terms and conditions: "Client", "You" and "Your" refers to you, the person accessing this website and accepting the terms and conditions. "Maxfund" "Ourselves", "We" and "Us", refers to our company. "Party", "Parties", or "Us", refers to both the Client and ourselves, or either the Client or ourselves.
 				</p>
 				<p>
 					<ol>
 						<li>
 						<b>Intellectual Property</b> <br/>
-						The content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Creed Profit Alliance and is protected by international copyright laws.
+						The content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Maxfund and is protected by international copyright laws.
 						</li>
 						<li>
 						<b>Use License</b>
 						<br/>
-						You may view, download, and print content from this website for personal, non-commercial use only. You must not modify, reproduce, or distribute the content for any commercial purpose without the express written consent of Creed Profit Alliance.
+						You may view, download, and print content from this website for personal, non-commercial use only. You must not modify, reproduce, or distribute the content for any commercial purpose without the express written consent of Maxfund.
 						</li>
 						<li>
 							<b> Disclaimer </b><br/>
-							The content on this website is provided for informational purposes only and should not be construed as investment or financial advice. Creed Profit Alliance does not guarantee the accuracy or completeness of the information on this website, and is not responsible for any errors or omissions.
+							The content on this website is provided for informational purposes only and should not be construed as investment or financial advice. Maxfund does not guarantee the accuracy or completeness of the information on this website, and is not responsible for any errors or omissions.
 						</li>
 						<li>
 							<b>Limitations of Liability </b> <br/>
-							In no event shall Creed Profit Alliance be liable for any damages, including without limitation, direct or indirect, special, incidental, or consequential damages, losses, or expenses arising in connection with the use of this website or the information contained herein.
+							In no event shall Maxfund be liable for any damages, including without limitation, direct or indirect, special, incidental, or consequential damages, losses, or expenses arising in connection with the use of this website or the information contained herein.
 						</li>
 						<li>
 							<b>Indemnification </b> <br/>
-							You agree to indemnify and hold Creed Profit Alliance harmless from any claims, damages, or expenses arising out of your use of this website.
+							You agree to indemnify and hold Maxfund harmless from any claims, damages, or expenses arising out of your use of this website.
 						</li>
 						<li>
 							<b>Modification of Terms </b> <br/>
-							Creed Profit Alliance reserves the right to modify these terms and conditions at any time without notice. By using this website, you agree to be bound by the current version of these terms and conditions.
+							Maxfund reserves the right to modify these terms and conditions at any time without notice. By using this website, you agree to be bound by the current version of these terms and conditions.
 						</li>
 						<li>
 							<b> Governing Law </b> <br/>
-							These terms and conditions shall be governed by and construed in accordance with the laws of the jurisdiction in which Creed Profit Alliance is located, without regard to conflicts of law principles. Any legal action arising out of or relating to these terms and conditions shall be brought in the courts of such jurisdiction.
+							These terms and conditions shall be governed by and construed in accordance with the laws of the jurisdiction in which Maxfund is located, without regard to conflicts of law principles. Any legal action arising out of or relating to these terms and conditions shall be brought in the courts of such jurisdiction.
 						</li>
 
 					</ol>
@@ -152,26 +122,26 @@
 
 						<div>
 						<h2 style="color:black;">Investment Terms</h2>
-						<p>1. Investments made through Creed Profit Alliance are subject to market risks.</p>
-						<p>2. Creed Profit Alliance offers 100% guarantee returns on investment.</p>
-						<p>3. Creed Profit Alliance reserves the right to modify or discontinue any investment plan at any time.</p>
+						<p>1. Investments made through Maxfund are subject to market risks.</p>
+						<p>2. Maxfund offers 100% guarantee returns on investment.</p>
+						<p>3. Maxfund reserves the right to modify or discontinue any investment plan at any time.</p>
 						<p>4. Withdrawals from investment plans are subject to applicable fees and may be subject to a waiting period.</p>
 						</div>
 
 						<div>
 						<h3 style="color:black;">Trading Terms</h3>
-						<p>1. Trading through Creed Profit Alliance is subject to market risks.</p>
-						<p>2. Creed Profit Alliance offers guarantee any returns on trading.</p>
-						<p>3. Creed Profit Alliance reserves the right to modify or discontinue any trading service at any time.</p>
+						<p>1. Trading through Maxfund is subject to market risks.</p>
+						<p>2. Maxfund offers guarantee any returns on trading.</p>
+						<p>3. Maxfund reserves the right to modify or discontinue any trading service at any time.</p>
 						<p>4. Trading fees and commissions are subject to change and may vary based on the traded instrument.</p>
 						</div>
 
 						<div class="">
 						<h2 style="color:black;">Loan Terms</h2>
-						<p>1. Loans offered through Creed Profit Alliance are subject to credit approval.</p>
+						<p>1. Loans offered through Maxfund are subject to credit approval.</p>
 						<p>2. Loan repayment terms and interest rates are subject to change and may vary based on the borrower's creditworthiness and other factors.</p>
 						<p>3. Late payments or defaults may result in additional fees and penalties.</p>
-						<p>4. Creed Profit Alliance reserves the right to modify or discontinue any loan offer at any time.</p>
+						<p>4. Maxfund reserves the right to modify or discontinue any loan offer at any time.</p>
 						</div>
 					</div>
 				</p>
@@ -184,7 +154,7 @@
 
 			<div class="container" id="privacy">
 				<h3>Privacy Policy</h2>
-				<p>At Creed Profit Alliance, we value your privacy and are committed to protecting your personal information. This policy outlines the types of information we collect, how we use it, and how we keep it secure.</p>
+				<p>At Maxfund, we value your privacy and are committed to protecting your personal information. This policy outlines the types of information we collect, how we use it, and how we keep it secure.</p>
 				<h3>Information we collect</h3>
 				<p>We may collect the following information:</p>
 				<ul>

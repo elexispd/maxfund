@@ -40,11 +40,11 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfunds" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfunds" class="letters-loading"> Maxfunds </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -52,37 +52,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#c4adaaa2ab84a7b6a1a1a0b4b6aba2adb0a5a8a8ada5aaa7a1eaa7aba9"> <span class="__cf_email__" data-cfemail="4e272028210e2d3c2b2b2a3e3c2128273a2f2222272f202d2b602d2123">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@include('partials.header')
             <!-- Header Section Start -->
           @include('partials.navbar')
         </header>
@@ -146,10 +116,10 @@
                     >
                         <div class="footer-about sc-md-mb-45">
                             <div class="footer-logo sc-mb-30">
-                                <a href="index-2.html"><img src="images/logo-1.png" alt="Creed Profit Alliance" style="width:150px; height:100px;"/></a>
+                                <a href="index-2.html"><img src="images/logo-1.png" alt="Maxfunds" style="width:150px; height:100px;"/></a>
                             </div>
                             <p class="footer-des">
-                                At Creed Profit Alliance, we are committed to providing exceptional customer service and personalized attention to all our clients.
+                                At Maxfunds, we are committed to providing exceptional customer service and personalized attention to all our clients.
                             </p>
 
                         </div>
@@ -193,7 +163,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="copyright-text text-center">
-                                <p>© 2025 <a href="#" target="_blank"> Creed Profit Alliance, </a> All Rights Reserved</p>
+                                <p>© 2025 <a href="#" target="_blank"> Maxfunds, </a> All Rights Reserved</p>
                             </div>
                         </div>
                     </div>

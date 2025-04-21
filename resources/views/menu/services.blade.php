@@ -6,7 +6,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8" />
-        <title>Creed Profit Alliance - Building worldclass investment portfolio with good returns.</title>
+        <title>Maxfund - Building worldclass investment portfolio with good returns.</title>
         <meta name="description" content="" />
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -37,11 +37,11 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfund" class="letters-loading"> Maxfund </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -49,37 +49,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#7e171018113e1d0c1b1b1a0e0c1118170a1f1212171f101d1b501d1113"> <span class="__cf_email__" data-cfemail="e68f888089a68594838382969489808f92878a8a8f87888583c885898b">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@include('partials.header')
             <!-- Header Section Start -->
 @include('partials.navbar')
         </header>
@@ -110,7 +80,7 @@
                         <img src="assets/img/service-details-content.html" alt="">
                         <h3 id="loan">Unlock Your Investment Potential with our Investment Loan</h3>
                         <p>
-							At Creed Profit Alliance, our investment loan service is designed to help our clients finance their investment activities and grow their portfolio while also managing their cash flow.</p>
+							At Maxfund, our investment loan service is designed to help our clients finance their investment activities and grow their portfolio while also managing their cash flow.</p>
 						<p>
 							Our investment loan is a flexible and convenient way to access the funds you need to invest in a wide range of assets, including stocks, bonds, and real estate. We offer competitive interest rates, and our loan terms are tailored to meet the specific needs of each client.
 						</p>
@@ -123,9 +93,9 @@
                         <p>
 							Ultimately, our investment loan is a powerful tool for investors who want to maximize their investment returns and grow their portfolio while also managing their cash flow. Our team of experts is available to provide personalized advice and support, ensuring that you have access to the tools and resources you need to succeed.
 						</p>
-							<h2 id="savings">Secure your financial future with Creed Profit Alliance's Saving Solutions</h2>
+							<h2 id="savings">Secure your financial future with Maxfund's Saving Solutions</h2>
 
-							<p>At Creed Profit Alliance, we understand the importance of building your wealth over time through disciplined savings habits. That's why we offer a variety of savings solutions to help you achieve your financial goals.</p>
+							<p>At Maxfund, we understand the importance of building your wealth over time through disciplined savings habits. That's why we offer a variety of savings solutions to help you achieve your financial goals.</p>
 
 							<h3>High-Yield Savings Accounts</h3>
 							<p>Our high-yield savings accounts offer competitive interest rates that can help your savings grow faster than traditional savings accounts. With our online savings, you can easily manage your account and track your savings progress.</p>
@@ -136,7 +106,7 @@
 							<h3>Education Savings Accounts (ESAs)</h3>
 							<p>Our education savings accounts (ESAs) allow you to save for your child's education expenses, including tuition, fees, books, and room and board. We offer Coverdell ESAs, which provide tax-free growth and withdrawals for qualified education expenses.</p>
 
-							<p>At Creed Profit Alliance, we are committed to helping you achieve your financial goals through our savings solutions. Our team of experts is always available to answer your questions and provide you with the guidance you need to make informed financial decisions. <a href="contact.html">Contact us</a> today to learn more about our savings solutions and how we can help you build your wealth over time.</p>
+							<p>At Maxfund, we are committed to helping you achieve your financial goals through our savings solutions. Our team of experts is always available to answer your questions and provide you with the guidance you need to make informed financial decisions. <a href="contact.html">Contact us</a> today to learn more about our savings solutions and how we can help you build your wealth over time.</p>
 
 
 
@@ -145,9 +115,9 @@
 
 
 						<img src="assets/img/service-details-content2.html" alt="">
-                        <h2 id="stocks">Grow Your Portfolio with Creed Profit Alliance's Comprehensive Stocks Trading Services </h2>
+                        <h2 id="stocks">Grow Your Portfolio with Maxfund's Comprehensive Stocks Trading Services </h2>
                         <p>
-							At Creed Profit Alliance, we offer a comprehensive stocks trading service that provides our clients with access to a wide range of popular stocks from markets around the world. Our trading platform is easy to use and features real-time market data, customizable charts, and advanced trading tools that enable our clients to make informed investment decisions.
+							At Maxfund, we offer a comprehensive stocks trading service that provides our clients with access to a wide range of popular stocks from markets around the world. Our trading platform is easy to use and features real-time market data, customizable charts, and advanced trading tools that enable our clients to make informed investment decisions.
 						</p>
 
                         <ul>
@@ -170,13 +140,13 @@
 
                         <h4>Our team of experts is dedicated to providing personalized advice and support, ensuring that our clients have access to the tools and resources they need to succeed in their investments. We offer competitive pricing and a range of trading options, including limit and stop orders, to help our clients achieve their financial goals.</h4>
 
-						<h3 id="bonds"> Maximize Your Returns with Creed Profit Alliance's Diverse Range of Bond Trading Options</h3>
+						<h3 id="bonds"> Maximize Your Returns with Maxfund's Diverse Range of Bond Trading Options</h3>
 
                         <p>
 							Bonds are a type of fixed-income investment that can provide a reliable source of income for investors. Essentially, when you invest in a bond, you are lending money to the bond issuer (which could be a government, corporation, or other organization) in exchange for regular interest payments and the return of your principal investment at the end of the bond's term.
 						</p>
 						<p>
-							At Creed Profit Alliance, we offer a variety of bonds and bond indices to our clients, including:
+							At Maxfund, we offer a variety of bonds and bond indices to our clients, including:
 						</p>
 
 						<ul>
@@ -197,7 +167,7 @@
 						</p>
 
 						<p>
-							At Creed Profit Alliance, we offer a variety of bond indices to suit the needs of our clients. Our expert team carefully analyzes market trends and selects bond indices that are best suited to each client's unique investment goals and risk tolerance.
+							At Maxfund, we offer a variety of bond indices to suit the needs of our clients. Our expert team carefully analyzes market trends and selects bond indices that are best suited to each client's unique investment goals and risk tolerance.
 						</p>
 						<p>
 							For example, one of the bond indices we offer is the Bloomberg Barclays US Aggregate Bond Index, which tracks the performance of investment-grade bonds issued in the US, including Treasury securities, mortgage-backed securities, and corporate bonds. Another example is the FTSE Russell Global Aggregate Bond Index, which tracks the performance of investment-grade bonds issued in both developed and emerging markets.
@@ -206,9 +176,9 @@
 							Our bond indexing service provides a useful tool for investors to evaluate the performance of their bond investments relative to the broader market. By leveraging our expertise in selecting relevant bond indices, our clients can make informed investment decisions and achieve their financial objectives.
 						</p>
 
-                        <h2 id="reit">Experience the Benefits of Real Estate Investing with Our Diverse Range of REITs at Creed Profit Alliance </h2>
+                        <h2 id="reit">Experience the Benefits of Real Estate Investing with Our Diverse Range of REITs at Maxfund </h2>
                         <p>
-							<img src="assets/img/skill_video_bg.html" alt="" align="right" style="padding:5px;"> At Creed Profit Alliance, we provide a managed investment plan that allows clients to invest in a diversified portfolio of real estate properties through REITs. REITs are a type of investment vehicle that own and manage income-generating real estate assets, such as commercial properties, apartment buildings, and retail centers. By investing in a REIT, clients can benefit from regular income distributions and the potential for capital appreciation, without the hassle of managing individual properties.
+							<img src="assets/img/skill_video_bg.html" alt="" align="right" style="padding:5px;"> At Maxfund, we provide a managed investment plan that allows clients to invest in a diversified portfolio of real estate properties through REITs. REITs are a type of investment vehicle that own and manage income-generating real estate assets, such as commercial properties, apartment buildings, and retail centers. By investing in a REIT, clients can benefit from regular income distributions and the potential for capital appreciation, without the hassle of managing individual properties.
 						</p>
 						<p>
 							We offer a range of REITs to suit the needs of our clients, with each REIT focused on a specific sector or geographic region. Here are five examples of the REITs we offer:
@@ -223,18 +193,18 @@
 
 						</ul>
 						<p>
-							Overall, our REIT investment plan provides a simple and convenient way for clients to access the benefits of real estate investing, without the hassles and risks associated with owning and managing individual properties. By offering a diverse range of REITs, Creed Profit Alliance provides clients with a variety of options to meet their investment goals and risk tolerance.
+							Overall, our REIT investment plan provides a simple and convenient way for clients to access the benefits of real estate investing, without the hassles and risks associated with owning and managing individual properties. By offering a diverse range of REITs, Maxfund provides clients with a variety of options to meet their investment goals and risk tolerance.
 						</p>
 						<p>
 							Our common REITs traded include Prologis Inc. (PLD), Simon Property Group Inc. (SPG), Digital Realty Trust Inc. (DLR), Public Storage (PSA), American Tower Corp. (AMT), Crown Castle International Corp. (CCI), Alexandria Real Estate Equities Inc. (ARE), Equity Residential (EQR), Ventas Inc. (VTR), Welltower Inc. (WELL).
 							<br/>
-							Please note that this list is not exhaustive and is subject to change based on market trends and the specific offerings of Creed Profit Alliance. It is always recommended to consult with our financial advisor before making any investment decisions.
+							Please note that this list is not exhaustive and is subject to change based on market trends and the specific offerings of Maxfund. It is always recommended to consult with our financial advisor before making any investment decisions.
 						</p>
-						<h3 id="futures">Take advantage of market volatility and potential profits with Creed Profit Alliance's Futures Trading.</h3>
+						<h3 id="futures">Take advantage of market volatility and potential profits with Maxfund's Futures Trading.</h3>
 						<p>
-							At Creed Profit Alliance, we offer futures trading as part of our suite of investment services. Futures trading allows investors to speculate on the future price movements of various assets, including commodities, currencies, and stock indices. By trading futures, investors can potentially profit from both rising and falling markets, and can use leverage to amplify their returns.
+							At Maxfund, we offer futures trading as part of our suite of investment services. Futures trading allows investors to speculate on the future price movements of various assets, including commodities, currencies, and stock indices. By trading futures, investors can potentially profit from both rising and falling markets, and can use leverage to amplify their returns.
 						</p>
-						<h3>Popular Futures Traded with Creed Profit Alliance</h3>
+						<h3>Popular Futures Traded with Maxfund</h3>
 						<ul>
 							<li>Crude Oil Futures</li>
 							<li>Gold Futures</li>
@@ -248,16 +218,16 @@
 							<li>Binance Coin Futures</li>
 						</ul>
 						<p>
-							Please note that this list is not exhaustive and is subject to change based on market trends and the specific offerings of Creed Profit Alliance. Futures trading carries a high level of risk and may not be suitable for all investors. It is always recommended to conduct thorough research and consult with our financial advisor before making any investment decisions.
+							Please note that this list is not exhaustive and is subject to change based on market trends and the specific offerings of Maxfund. Futures trading carries a high level of risk and may not be suitable for all investors. It is always recommended to conduct thorough research and consult with our financial advisor before making any investment decisions.
 						</p>
-                        <h3>Diversify your portfolio and potentially profit from rising and falling prices with Creed Profit Alliance's Commodities Trading.</h3>
+                        <h3>Diversify your portfolio and potentially profit from rising and falling prices with Maxfund's Commodities Trading.</h3>
 						<p>
-							At Creed Profit Alliance, we offer commodities trading as part of our suite of investment services. Commodities are raw materials or primary agricultural products that can be traded on commodity exchanges, and they include metals, energy, and agricultural products. By trading commodities, investors can potentially profit from both rising and falling prices, and can diversify their portfolios with non-correlated assets.
+							At Maxfund, we offer commodities trading as part of our suite of investment services. Commodities are raw materials or primary agricultural products that can be traded on commodity exchanges, and they include metals, energy, and agricultural products. By trading commodities, investors can potentially profit from both rising and falling prices, and can diversify their portfolios with non-correlated assets.
 						</p>
 						<p>
 							Our commodities trading platform offers access to a wide range of markets and products, along with advanced trading tools and analytics. We also provide educational resources and support to help our clients navigate the commodities markets with confidence.
 						</p>
-						<h3>Popular Commodities Traded with Creed Profit Alliance</h3>
+						<h3>Popular Commodities Traded with Maxfund</h3>
 						<ul>
 							<li>Gold</li>
 							<li>Crude Oil</li>
@@ -270,7 +240,7 @@
 							<li>Cocoa</li>
 							<li>Coffee</li>
 						</ul>
-						<p>Please note that this list is not exhaustive and is subject to change based on market trends and the specific offerings of Creed Profit Alliance. As a responsible financial services provider, we at Creed Profit Alliance take risk management seriously when it comes to commodities trading. We have a team of experienced professionals who constantly monitor market trends and provide risk management strategies to our clients. Our goal is to help you maximize your profit potential while minimizing your risk exposure. You can trust us to provide you with the necessary support and guidance to make informed decisions and achieve your investment goals.</p>
+						<p>Please note that this list is not exhaustive and is subject to change based on market trends and the specific offerings of Maxfund. As a responsible financial services provider, we at Maxfund take risk management seriously when it comes to commodities trading. We have a team of experienced professionals who constantly monitor market trends and provide risk management strategies to our clients. Our goal is to help you maximize your profit potential while minimizing your risk exposure. You can trust us to provide you with the necessary support and guidance to make informed decisions and achieve your investment goals.</p>
                     </div>
                 </div>
             </div>

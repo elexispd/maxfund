@@ -6,7 +6,7 @@
 <head>
         <!-- meta tag -->
         <meta charset="utf-8" />
-        <title>Creed Profit Alliance - Building worldclass investment portfolio with good returns.</title>
+        <title>Maxfund - Building worldclass investment portfolio with good returns.</title>
         <meta name="description" content="" />
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -31,17 +31,17 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     </head>
-    <body>
+    <bodys>
         <!-- preloader -->
         <div id="preloader" class="preloader">
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Creed Profit Alliance" />
+                        <img src="images/favicon.png" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
-                    <span data-text-preloader="Creed Profit Alliance" class="letters-loading"> Creed Profit Alliance </span>
+                    <span data-text-preloader="Maxfund" class="letters-loading"> Maxfund </span>
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -49,37 +49,7 @@
         <!-- welcome content start from here -->
         <!--========== Header Section Start ==============-->
         <header class="sc-header-section" id="sc-header-sticky">
-            <div class="sc-topbar-section sc-topbar-section-three">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="sc-header-content-left">
-                                <ul class="list-gap white-color">
-                                    <li>
-                                        <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=447413729810"> 447413729810</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-paper-plane"></i><a href="https://t.me/customersupportCPA"> customersupportCPA</a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-message"></i
-                                        ><a href="cdn-cgi/l/email-protection.html#0f666169604f6c7d6a6a6b7f7d6069667b6e6363666e616c6a216c6062"> <span class="__cf_email__" data-cfemail="9cf5f2faf3dcffeef9f9f8eceef3faf5e8fdf0f0f5fdf2fff9b2fff3f1">[email&#160;protected]</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sc-header-content-right align-items-center d-flex justify-content-end">
-                                <div class="sc-header-date">
-                                    <ul class="list-gap sc-date">
-                                        <li><i class="icon-timer"></i> 24/7 Service</li>
-                                    </ul>
-                                </div>
-								                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+             @include('partials.header')
             <!-- Header Section Start -->
 @include('partials.navbar')
         </header>
@@ -108,7 +78,7 @@
                     class="sc-about-content-area sc-pt-40 sc-pb-40 position-relative p-z-idex d-flex align-items-center sc-md-pt-80 sc-md-pb-80"
                 >
                     <div class="sc-about-bg-image" data-sal="slide-right" data-sal-duration="800">
-                        <img src="assets/images/about/ab-image1.jpg" alt="About" />
+                        <img src="assets/images/about/max4.jpg" alt="About" />
                     </div>
                     <div
                         class="sc-about-text-box sc-md-mt-50 sc-pl-30 sc-md-pl-0"
@@ -121,7 +91,7 @@
                                 Experience the Power of Informed Investing
                             </h2>
                             <p class="des">
-                                Creed Profit Alliance is a multi-asset management company that offers a wide range of investment products and personalized services to help you achieve your financial goals.
+                                Maxfund is a multi-asset management company that offers a wide range of investment products and personalized services to help you achieve your financial goals.
                             </p>
 
                         </div>
@@ -187,13 +157,13 @@
                             >
 							<div class="sc-global-text">
 							<p class="des">
-                               Creed Profit Alliance was founded in 2018 by a team of experienced investment professionals with a passion for helping people achieve their financial goals. From the beginning, our mission was to provide clients with access to a diverse range of investment products and services, and to offer personalized investment advice and guidance to help them make informed investment decisions.
+                               Maxfund was founded in 2018 by a team of experienced investment professionals with a passion for helping people achieve their financial goals. From the beginning, our mission was to provide clients with access to a diverse range of investment products and services, and to offer personalized investment advice and guidance to help them make informed investment decisions.
                            </p>
 						   <p class="des">
-								In the years since our founding, Creed Profit Alliance has grown rapidly, thanks to the dedication and expertise of our team, and the trust and confidence of our clients. In 2022, we decided to take the next step in our journey by going public, with the goal of expanding our reach and impact even further.
+								In the years since our founding, Maxfund has grown rapidly, thanks to the dedication and expertise of our team, and the trust and confidence of our clients. In 2022, we decided to take the next step in our journey by going public, with the goal of expanding our reach and impact even further.
 						   </p>
 						   <p class="des">
-								Today, Creed Profit Alliance is a trusted and respected multi-asset management company, with a proven track record of helping clients achieve their financial goals. We remain committed to our mission of providing personalized investment advice and guidance, and to helping people invest with confidence and achieve long-term success.
+								Today, Maxfund is a trusted and respected multi-asset management company, with a proven track record of helping clients achieve their financial goals. We remain committed to our mission of providing personalized investment advice and guidance, and to helping people invest with confidence and achieve long-term success.
 						   </p>
 						   <p class="des">
 
@@ -232,7 +202,7 @@
 		<br/>
             <div class="container">
 				<h3>Mission Statement</h3>
-				<p class="des">Our mission at Creed Profit Alliance is to provide clients with access to a diverse range of investment products and services, and to offer personalized investment advice and guidance to help them make informed investment decisions. We are committed to helping people invest with confidence and achieve long-term success.</p>
+				<p class="des">Our mission at Maxfund is to provide clients with access to a diverse range of investment products and services, and to offer personalized investment advice and guidance to help them make informed investment decisions. We are committed to helping people invest with confidence and achieve long-term success.</p>
 				<h3>Vision</h3>
 				<p class="des">Our vision is to be a leading multi-asset management company, known for our expertise, innovation, and commitment to excellence. We aim to be the trusted partner of choice for clients seeking personalized investment advice and guidance.</p>
 				<h3>Purpose</h3>

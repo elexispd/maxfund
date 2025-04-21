@@ -4,7 +4,7 @@
 * Template : Boxfin - Corporate Business HTML Template
 * Author : SoftCoderes
 * Version:        1.0
-* Author URI : http://www.softcoders.net/ 
+* Author URI : http://www.softcoders.net/
 
 =========================================================*/
 /*=======================================================
@@ -46,6 +46,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   overflow-x: hidden;
+  background-color: bl !important;
 }
 
 input,
@@ -30157,6 +30158,7 @@ PAGE LOAD ANIMATION
 .sc-slider-section .slide-image-2 {
   background: url(../images/slider/slide1_2.jpg);
 }
+
 .sc-slider-section .slide-image-3 {
   background: url(../images/slider/slide1_3.jpg);
 }
@@ -34032,7 +34034,7 @@ PAGE LOAD ANIMATION
 }
 
 .sc-breadcrumb-style {
-  background: url(../images/bg/breadcrumb.jpg);
+  background: url(../images/bg/max10.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37417,3 +37419,74 @@ PAGE LOAD ANIMATION
     right: 20px;
   }
 }
+.text{
+    background: blac !important;
+}
+.text:hover{
+    background: white !important;
+    color: #000 !important;
+}
+
+/* Ensure the swiper container and slides are properly sized */
+.swiper {
+    width: 100%;
+    height: 100vh; /* or any height you want for the slider */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Ensure each slide takes full space and doesn't overlap others */
+  .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Background image styling */
+  .slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  /* Slide content */
+  .sc-slider-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding-top: 150px; /* Adjust as needed for vertical alignment */
+  }
+  .sc-slider-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding-top: 0; /* Adjust this value */
+    text-align: center;
+  }
+  .slide-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* adjust opacity here */
+    z-index: 1;
+  }
+  .sc-breadcrumb-style::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 90%;
+    background: rgba(0, 0, 0, 0.7); /* adjust opacity here */
+    z-index: 1;
+    overflow-y: hidden;
+  }
+

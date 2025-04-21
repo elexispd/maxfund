@@ -24,10 +24,10 @@
             >
                 <div class="footer-about sc-md-mb-45">
                     <div class="footer-logo sc-mb-30">
-                        <a href="index-2.html"><img src="images/logo-1.png" alt="Creed Profit Alliance" style="width:150px; height:100px;"/></a>
+                        <a href="index-2.html"><img src="assets/images/project/logo.jpg" alt="Maxfund" style="width:150px; height:100px;"/></a>
                     </div>
                     <p class="footer-des">
-                        At Creed Profit Alliance, we are committed to providing exceptional customer service and personalized attention to all our clients.
+                        At Maxfund, we are committed to providing exceptional customer service and personalized attention to all our clients.
                     </p>
 
                 </div>
@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright-text text-center">
-                        <p>© 2025 <a href="#" target="_blank"> Creed Profit Alliance, </a> All Rights Reserved</p>
+                        <p>© 2025 <a href="#" target="_blank"> Maxfund, </a> All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
 <div class="sc-product-offcanvas-area">
     <div class="sc-offcanvas-header d-flex align-items-center justify-content-between">
         <div class="sticky-logo logo-area text-center">
-            <a href="index-2.html"><img src="images/logo-1.png" alt="Logo" width="140px"/></a>
+            <a href="index-2.html"><img src="assets/images/project/logo.jpg" alt="Logo" width="140px"/></a>
         </div>
         <div class="offcanvas-icon">
             <a id="canva_close" href="#">

@@ -4,7 +4,7 @@
             <div class="col-lg-9 col-6">
                 <div class="sc-menu-inner d-flex align-items-center">
                     <div class="sc-header-logo sc-pr-112">
-                        <a href="/"><img src="images/logo.png" alt="Logo" style="width:120px;" /></a>
+                        <a href="/"><img src="assets/images/project/logo.jpg" alt="Logo" style="width:120px;" /></a>
                     </div>
                     <div class="sc-main-menu d-lg-block d-none">
                         <!-- Mainmenu Section Start -->

@@ -19,7 +19,7 @@
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-exclamation-circle me-3"></i>
-                    <div>
+                    <div class="text-danger">
                         {{ session('error') }}
                     </div>
                 </div>

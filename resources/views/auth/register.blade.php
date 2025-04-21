@@ -52,8 +52,10 @@ new #[Layout('layouts.guest')] class extends Component
 </div> --}}
 <!--=========== breadcrumb Section End =========-->
 @include('partials.header-register')
+
 <section class="contact-page-wrap section-padding">
-<div class="container">
+
+<div class="container" style="margin: auto !important">
       <!-- Login & Register Box Start -->
                     <div class="card">
                         <!-- Section Title Start -->
@@ -331,7 +333,7 @@ new #[Layout('layouts.guest')] class extends Component
                                 </div>
                                 <div class="form-group">
 
-                                    <input type="hidden" class="form-control" name="ref"  >
+                                    <input type="hidden" value="{{ request()->query('ref') }}" class="form-control" name="ref"  >
                                 </div>
                                 <div class="form-group"><br/>
                                     <input class="btn btn-primary"  type="submit" name="Register" value="Register">
@@ -346,4 +348,5 @@ new #[Layout('layouts.guest')] class extends Component
 </div>
 
 </div>
+
 @include('partials.footer-register')
