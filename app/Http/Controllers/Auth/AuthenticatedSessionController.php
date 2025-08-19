@@ -30,6 +30,15 @@ class AuthenticatedSessionController extends Controller
         // Get the authenticated user
         $user = Auth::user();
 
+        // if (! $user->hasVerifiedEmail()) {
+        //     Auth::logout();
+        //     $request->session()->invalidate();
+        //     $request->session()->regenerateToken();
+
+        //     return redirect()->route('verification.notice')
+        //         ->withErrors(['email' => 'You must verify your email before logging in.']);
+        // }
+
         // Check if user is inactive
         if ($user->status === 'inactive') {
             // Log the user out immediately
@@ -39,7 +48,7 @@ class AuthenticatedSessionController extends Controller
 
             // Return with error message
             return back()->withErrors([
-                'email' => 'Your account has been deactivated. Please contact support.',
+                'email' => 'Your account has been deactivated. Please contact support at support@maxfund.net',
             ]);
         }
 
@@ -47,6 +56,8 @@ class AuthenticatedSessionController extends Controller
 
         // Proceed with normal login for active users
         $request->session()->regenerate();
+
+
 
         if ($user->role == "admin") {
             return redirect()->intended(route('admin.dashboard'));

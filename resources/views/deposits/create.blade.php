@@ -65,12 +65,12 @@
                           class="form-control"
                           name="amount"
                         />
-                        <label for="" class="text-info">
+                        <label for="" class="" style="color: #191970; font-weight:bold;">
                             Min $50.00
                           </label>
                       </div>
 
-                      <button class="btn btn-primary">Proceed</button>
+                      <button class="btn" style="background: #191970; color: white;">Proceed</button>
                 </form>
 
 

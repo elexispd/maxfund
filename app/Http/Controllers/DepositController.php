@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Deposit;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Wallet;
+use App\Models\Withdrawal;
 use App\Models\WalletMethod;
 use Illuminate\Support\Str;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\AdminWallet;
+use App\Notifications\DepositReceivedNotification;
+use App\Notifications\WithdrawalStatusNotification;
 
 class DepositController extends Controller
 {
@@ -91,5 +95,77 @@ class DepositController extends Controller
         return redirect()->route('user.deposit.create')
                ->with('success', 'Payment proof uploaded successfully. We will verify your deposit shortly.');
     }
+
+
+
+
+    public function createForUser($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admin.deposits.create', compact('user'));
+    }
+
+    public function storeForUser(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        $validated = $request->validate([
+            'currency' => 'required|exists:wallet_methods,code',
+            'amount' => 'required|numeric|min:50',
+        ]);
+
+        $walletMethod = WalletMethod::where('code', $validated['currency'])->firstOrFail();
+
+        $deposit = Deposit::create([
+            'user_id' => $user->id,
+            'wallet_method_id' => $walletMethod->id,
+            'amount' => $validated['amount'],
+            'status' => 'pending',
+        ]);
+
+        $deposit->user->notify(new DepositReceivedNotification($deposit));
+        return redirect()->back()->with('success', 'Deposit created successfully.');
+    }
+
+
+    public function createWithdrawal($id)
+{
+    $user = User::findOrFail($id);
+    return view('admin.withdrawals.create', compact('user'));
+}
+public function storeWithdrawal(Request $request, $id)
+{
+    $user = User::findOrFail($id);
+
+    $validated = $request->validate([
+        'amount' => 'required|numeric|min:1',
+    ]);
+
+    // Check if user has enough balance
+    if ($user->balance < $validated['amount']) {
+        return redirect()->back()->with('error', 'Insufficient balance for withdrawal.');
+    }
+
+    // Subtract amount
+    $user->balance -= $validated['amount'];
+    $user->save();
+
+    $wallet = $user->wallets()->first(); // Get user's first wallet
+
+    if (!$wallet) {
+        return redirect()->back()->with('error', 'User has no wallet associated.');
+    }
+
+    $withdrawal = Withdrawal::create([
+        'user_id' => $user->id,
+        'wallet_id' => $wallet->id,
+        'amount' => $validated['amount'],
+        'status' => 1, // Completed
+    ]);
+
+    $withdrawal->user->notify(new WithdrawalStatusNotification($withdrawal, 'processing'));
+        // 🧠 Always return something at the end!
+    return redirect()->back()->with('success', 'Withdrawal processed successfully.');
+}
 
 }

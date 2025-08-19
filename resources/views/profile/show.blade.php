@@ -31,7 +31,7 @@
                 <a href="#"><i class="icon-home"></i></a>
             </li>
             <li class="separator"><i class="icon-arrow-right"></i></li>
-            <li class="nav-item"><a href="{{ route('admin.user.index') }}">Users</a></li>
+            <li class="nav-item"><a href="#">Users</a></li>
             <li class="separator"><i class="icon-arrow-right"></i></li>
             <li class="nav-item"><a href="#">User Details</a></li>
         </ul>
@@ -51,7 +51,7 @@
                         <!-- Personal Information Column -->
                         <div class="col-md-6">
                             <div class="info-section mb-4">
-                                <h5 class="section-title fw-bold text-primary mb-3">
+                                <h5 class="section-title fw-bold mb-3" style="color:#191970">
                                     <i class="fas fa-user-circle mr-2"></i>Personal Information
                                 </h5>
                                 <div class="info-item row mb-2">
@@ -80,7 +80,7 @@
 
                             <!-- Account Information -->
                             <div class="info-section mb-4">
-                                <h5 class="section-title fw-bold text-primary mb-3">
+                                <h5 class="section-title fw-bold  mb-3" style="color:#191970">
                                     <i class="fas fa-wallet mr-2"></i>Account Information
                                 </h5>
                                 <div class="info-item row mb-2">
@@ -106,10 +106,10 @@
                         <div class="col-md-6">
                             <!-- Wallet Addresses -->
                             <div class="info-section mb-4">
-                                <h5 class="section-title fw-bold text-primary mb-3">
+                                <h5 class="section-title fw-bold  mb-3" style="color:#191970">
                                     <i class="fas fa-coins mr-2"></i>Wallet Addresses
                                 </h5>
-                                @if($user->wallets && count(json_decode($user->wallets, true)))
+                                @if($user->wallets && $user->wallets->isNotEmpty())
                                     <div class="table-responsive">
                                         <table class="table table-sm table-hover">
                                             <thead class="bg-light">
@@ -119,10 +119,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach(json_decode($user->wallets, true) as $wallet)
+                                                @foreach($user->wallets as $wallet)
                                                 <tr>
-                                                    <td class="text-uppercase">{{ $wallet['currency'] }}</td>
-                                                    <td class="text-monospace small">{{ $wallet['address'] }}</td>
+                                                    <td class="text-uppercase">{{ $wallet->walletMethod->name }}</td>
+                                                    <td class="text-monospace small">{{ $wallet->address }}</td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
@@ -135,7 +135,7 @@
 
                             <!-- Referral Information -->
                             <div class="info-section">
-                                <h5 class="section-title fw-bold text-primary mb-3">
+                                <h5 class="section-title fw-bold  mb-3" style="color:#191970">
                                     <i class="fas fa-users mr-2"></i>Referral Information
                                 </h5>
                                 <div class="info-item row mb-2">
@@ -157,6 +157,18 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="text-center mb-4">
+                                <img src="{{ $user->profile_image ? asset('storage/'.$user->profile_image) : asset('images/avatar.jpg') }}"
+                                    class="rounded-circle" width="120" height="120" alt="Profile Picture">
+
+                                <form action="{{ route('profile.upload.image') }}" method="POST" enctype="multipart/form-data" class="mt-3">
+                                    @csrf
+                                    <input type="file" name="image" class="form-control mb-2">
+                                    <button type="submit" class="btn btn-primary btn-sm">Upload</button>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>

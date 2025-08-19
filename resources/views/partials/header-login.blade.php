@@ -7,8 +7,8 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.html" />
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+        <link rel="icon" type="image/png" href="{{ asset('assets/img/newlogo.jpg') }}?v={{ time() }}">
+
         <!-- Bootstrap  v5.1.3 css -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <!-- Sall css -->
@@ -40,7 +40,7 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Maxfund" />
+                        <img src="assets/img/newlogo.jpg" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
@@ -55,10 +55,7 @@
 @include('partials.header')
             <!-- Header Section Start -->
           @include('partials.navbar')
-        </header>
-        <div style="position:fixed; float:right; bottom:40%; z-index: 100; font-size:60px; color:blue; right:0; margin-right:20px;">
-            <a href="https://api.whatsapp.com/send?phone=447413729810" style="border-radius:20%; background:white;padding:2px;"><i class="fab fa-whatsapp"></i></a>
-        </div>
+        
         <!--========== Header Section End ==============-->
         <!--=========== breadcrumb Section Start =========-->
         <div class="sc-breadcrumb-style sc-pt-135 sc-pb-110">

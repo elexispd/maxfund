@@ -13,7 +13,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- favicon -->
         <link rel="apple-touch-icon" href="apple-touch-icon.html" />
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/newlogo.jpg') }}" />
+
+         
         <!-- Bootstrap  v5.1.3 css -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <!-- Sall css -->
@@ -52,11 +54,9 @@
           @include('partials.header')
             <!-- Header Section Start -->
 @include('partials.navbar')
-        </header>
-        <div style="position:fixed; float:right; bottom:40%; z-index: 100; font-size:60px; color:blue; right:0; margin-right:20px;">
-            <a href="https://api.whatsapp.com/send?phone=447413729810" style="border-radius:20%; background:white;padding:2px;"><i class="fab fa-whatsapp"></i></a>
-        </div>
+       
         <!--========== Header Section End ==============-->
+
 
   <!--=========== Slider Section Start =========-->
 @include('partials.slider')
@@ -70,9 +70,9 @@
                         <div class="col-lg-6">
                             <div class="sc-statistics-left-content">
                                 <div class="sc-heading-area sc-mb-35">
-                                    <span class="sub-title"><i class="icon-line"></i> Our Statistics</span>
+                                    <span class="sub-title"><i class="icon-line" style="color: #191970 !important"></i> Our Statistics</span>
                                     <h2 class="title">
-                                        Experience the power of informed investing - <span class="primary-color italic"> Explore our statistics</span>
+                                        Experience the power of informed investing - <span class=" italic" style="color: #191970"> Explore our statistics</span>
                                     </h2>
                                 </div>
                                 <div
@@ -93,7 +93,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="sc-statistics-service-box sc-mb-25 text-center">
-                                        <i class="p-z-idex position-relative icomoon icon-happy"></i>
+                                        <i class="p-z-idex position-relative icomoon icon-happy" style="background: #191970"></i>
                                         <div class="sc-counter-number">
                                             <div class="sc-count">
                                                 <span class="odometer" data-count="43469">0</span>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="sc-statistics-service-box sc-mb-25 text-center">
-                                        <i class="p-z-idex position-relative icomoon icon-complete"></i>
+                                        <i class="p-z-idex position-relative icomoon icon-complete" style="background: #191970"></i>
                                         <div class="sc-counter-number">
                                             <div class="sc-count">
                                                 <span class="odometer" data-count="3">0</span> <sup>+</sup>
@@ -115,7 +115,7 @@
                                 </div>
                                 <div class="col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                                     <div class="sc-statistics-service-box sc-mb-25 text-center">
-                                        <i class="p-z-idex position-relative icomoon icon-running"></i>
+                                        <i class="p-z-idex position-relative icomoon icon-running" style="background: #191970"></i>
                                         <div class="sc-counter-number">
                                             <div class="sc-count">
                                                 <span class="odometer" data-count="60.30">0</span><sub>M</sub>
@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
                                     <div class="sc-statistics-service-box sc-mb-25 text-center">
-                                        <i class="p-z-idex position-relative icomoon icon-wining"></i>
+                                        <i class="p-z-idex position-relative icomoon icon-wining" style="background: #191970"></i>
                                         <div class="sc-counter-number">
                                             <div class="sc-count">
                                                 <span class="odometer" data-count="35.80">0</span><sub>M</sub>
@@ -149,10 +149,10 @@
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                         <div class="sc-heading-area sc-mb-35 text-center">
-                            <span class="sub-title" "><i class="icon-line"></i> Explore Our Services</span>
+                            <span class="sub-title" "><i class="icon-line" style="color: #191970 !important"></i> Explore Our Services</span>
 
                             <h2 class="title" ">
-                               Discover the range of investment services we offer to help you achieve your <span class="primary-color italic"> financial goals.</span>
+                               Discover the range of investment services we offer to help you achieve your <span class=" italic" style="color: #191970"> financial goals.</span>
                             </h2>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                         data-sal-duration="800"
                     >
                         <div class="sc-heading-area sc-mb-35">
-                            <span class="sub-title"><i class="icon-line"></i> About Company</span>
+                            <span class="sub-title"><i class="icon-line" style="color: #191970 !important"></i> About Company</span>
                             <h2 class="title">
                                 Experience the Power of Informed Investing
                             </h2>
@@ -259,7 +259,7 @@
                         </div>
                         <div class="sc-about-item sc-ipade-pr-0 d-flex align-items-center sc-mb-20 sc-pr-180">
                             <div class="about-icon sc-mr-20">
-                                <i class="icon-happy2"></i>
+                                <i class="icon-happy2" style="color: #191970 !important"></i>
                             </div>
                             <div class="sc-process-content">
                                 <h4><a class="title" href="#">Experienced Professionals</a></h4>
@@ -270,7 +270,7 @@
                         </div>
                         <div class="sc-about-item sc-ipade-pr-0 d-flex align-items-center sc-mb-20 sc-pr-180">
                             <div class="about-icon sc-mr-20">
-                                <i class="icon-lifetime"></i>
+                                <i class="icon-lifetime" style="color: #191970 !important"></i>
                             </div>
                             <div class="sc-process-content">
                                 <h4><a class="title" href="#">Retirement Planning</a></h4>
@@ -282,8 +282,8 @@
                         <div class="sc-auother-area d-flex align-items-center">
 
                             <div class="sc-about-support d-flex align-items-center">
-                                <div class="sc-support-image sc-mr-20">
-                                    <img src="assets/images/about/support-icon.png" alt="Support" />
+                                <div class="sc-support-image sc-mr-20" >
+                                    <i class="fab fa-whatsapp"  " ></i>
                                 </div>
                                 <div class="sc-support-text">
                                     <span class="sub-title d-block">WhatsApp Support</span>
@@ -291,61 +291,61 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sc-about-shape">
-                            <img src="assets/images/icons/about-shape.png" alt="Shape" />
-                        </div>
+                        {{-- <div class="sc-about-shape">
+                            <img src="assets/images/icons/about-shape.png" alt="Shape" style="color: #191970 !important" />
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </div>
         <!--=========== about Section End =========-->
 		   <!--=========== popular section Start =========-->
-        <div class="sc-price-section-area sc-pt-100 sc-pb-120 sc-md-pt-80 sc-md-pb-100" id="plans" style="background: black">
+           <div class="sc-price-section-area sc-pt-100 sc-pb-120 sc-md-pt-80 sc-md-pb-100" id="plans" style="background: black">
             <div class="container sc-sm-pl-25 sc-sm-pr-25" style="background: #fff">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                         <div class="sc-heading-area sc-mb-75 text-center">
-                            <span class="sub-title"style="margin-top:1.3rem" ><i class="icon-line"></i> Explore Our Investment Plans</span>
+                            <span class="sub-title"style="margin-top:1.3rem" ><i class="icon-line" style="color: #191970 !important"></i> Explore Our Investment Plans</span>
                             <h2 class="title">
-                                Invest in Your Future with Confidence through our Diverse Range of <span class="primary-color italic">Investment</span> Products.
+                                Invest in Your Future with Confidence through our Diverse Range of <span class=" italic" style="color: #191970 !important">Investment</span> Products.
                             </h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
-                        <div class="sc-price-item sc-price-active">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #">
+                        <div class="sc-price-item sc-price-active" style="border: 0.5rem solid #191970; border-radius: 0 2rem 2rem 0;">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
-                                    <img src="assets/images/icons/standard.png" alt="Standard" />
+                                    <i class="fas fa-coins" style="background:white; color: #191970; font-size:2rem"></i>
                                 </div>
                                 <div class="price-text">
-                                    <h2 class="sc-price">12.50% </h2>
-									<small class="sub-title">Interest daily </small>
-                                    <h4 class="sc-price">REIT - I</h4>
+                                    <h2 class="sc-price" style=" color: #191970; ">4.50% </h2>
+                                    <small class="sub-title" style=" color: #191970; ">Interest daily </small>
+                                    <h4 class="sc-price" style=" color: #191970; ">SPOT PLAN</h4>
                                 </div>
                             </div>
                             <div class="sc-content-area">
                                 <div class="sc-content-list sc-mb-25 sc-pt-10">
                                     <ul class="list-gap sc-list">
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Min: 10,000                                        </li>
+                                            <i class="fas fa-sort-amount-down" style="background:white; color: #191970; "></i>
+                                            Min: $50                                       </li>
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Max: 99,999                                        </li>
+                                            <i class="fas fa-sort-amount-up" style="background:white; color: #191970; "></i>
+                                            Max: $5,000                                       </li>
                                         <li>
-                                            <i class="icon-check"></i>
-                                            INFO: REIT STOCKS: ACC, IRM, RUSSEL 1000, XLRE, CCI                                        </li>
+                                            <i class="fas fa-info-circle" style="background:white; color: #191970; "></i>
+                                            INFO: BITCOIN, ETHEREUM, SOLANA, BNB SMART CHAIN, USDT                                        </li>
                                         <li>
 
-                                            <b>REAL ESTATE</b>
+                                            <b style=" color: #191970; ">SPOT</b>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="sc-price-button">
-                                    <a class="sc-price-btn" href="{{route('login')}}">INVEST </a>
+                                    <a class="sc-price-btn" href="{{route('investment')}}">INVEST </a>
                                 </div>
                             </div>
                             <div class="price-shape-one"></div>
@@ -355,38 +355,40 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
-                        <div class="sc-price-item sc-price-active">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
+                        <div class="sc-price-item sc-price-active" style="border: 0.5rem solid #191970; border-radius: 0 2rem 2rem 0;">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
-                                    <img src="assets/images/icons/standard.png" alt="Standard" />
+                                    <i class="fas fa-coins" style="background:white; color: #191970; font-size:2rem"></i>
                                 </div>
                                 <div class="price-text">
-                                    <h2 class="sc-price">15.00% </h2>
-									<small class="sub-title">Interest daily </small>
-                                    <h4 class="sc-price">REIT - II</h4>
+                                    <h2 class="sc-price" style=" color: #191970; ">6.50% </h2>
+                                    <small class="sub-title" style=" color: #191970; ">Interest daily </small>
+                                    <h4 class="sc-price" style=" color: #191970; ">FUTURES PLAN</h4>
                                 </div>
                             </div>
                             <div class="sc-content-area">
                                 <div class="sc-content-list sc-mb-25 sc-pt-10">
                                     <ul class="list-gap sc-list">
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Min: 100,000                                        </li>
-                                        <li>
-                                            <i class="icon-check"></i>
-                                            Max: 10,000,000                                        </li>
-                                        <li>
-                                            <i class="icon-check"></i>
-                                            REIT STOCKS: ACC, IRM, RUSSEL 1000, XLRE, CCI, VNO, NLY                                        </li>
-                                        <li>
+                                            <i class="fas fa-sort-amount-down" style="background:white; color: #191970; ">
 
-                                            <b>REAL ESTATE</b>
+                                            </i>
+                                            Min: $5,000                                        </li>
+                                        <li>
+                                            <i class="fas fa-sort-amount-up" style="background:white; color: #191970; "></i>
+                                            Max: $50,000                                       </li>
+                                            <li>
+                                                <i class="fas fa-info-circle" style="background:white; color: #191970; "></i>
+                                                INFO: BITCOIN, ETHEREUM, SOLANA, BNB SMART CHAIN, USDT                                        </li>
+                                            <li>
+
+                                            <b style=" color: #191970; ">FUTURES</b>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="sc-price-button">
-                                    <a class="sc-price-btn" href="login.html">INVEST </a>
+                                    <a class="sc-price-btn" href="{{route('investment')}}">INVEST </a>
                                 </div>
                             </div>
                             <div class="price-shape-one"></div>
@@ -396,38 +398,39 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
-                        <div class="sc-price-item sc-price-active">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
+                        <div class="sc-price-item sc-price-active" style="border: 0.5rem solid #191970; border-radius: 0 2rem 2rem 0;">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
-                                    <img src="assets/images/icons/standard.png" alt="Standard" />
+                                    <i class="fas fa-coins" style="background:white; color: #191970; font-size:2rem"></i>
                                 </div>
                                 <div class="price-text">
-                                    <h2 class="sc-price">5.00% </h2>
-									<small class="sub-title">Interest daily </small>
-                                    <h4 class="sc-price">FUTURE - ASF01</h4>
+                                    <h2 class="sc-price" style=" color: #191970; ">8.50% </h2>
+                                    <small class="sub-title" style=" color: #191970; ">Interest daily </small>
+                                    <h4 class="sc-price" style=" color: #191970; ">FOREX PLAN</h4>
                                 </div>
                             </div>
                             <div class="sc-content-area">
                                 <div class="sc-content-list sc-mb-25 sc-pt-10">
                                     <ul class="list-gap sc-list">
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Min: 50                                        </li>
+                                            <i class="fas fa-sort-amount-down" style="background:white; color: #191970; "></i>
+                                            Min: $50,000                                       </li>
+                                            <li>
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Max: 9,999                                        </li>
+                                            <i class="fas fa-sort-amount-up" style="background:white; color: #191970; "></i>
+                                            Max: $500,000
+                                        </li>
                                         <li>
-                                            <i class="icon-check"></i>
-                                            TRADING INSTRUMENTS: WTI CRUDE OIL, S&P 500, BTCUSDT, ATOMUSDT, RENUSDT, XRPUSDT, RENUSDT, 1000SHIBUSDT                                        </li>
-                                        <li>
+                                            <i class="fas fa-info-circle" style="background:white; color: #191970; "></i>
+                                            TRADING INSTRUMENTS:  BITCOIN, ETHEREUM, SOLANA, BNB SMART CHAIN, USDT                                       </li>
 
-                                            <b>FUTURES</b>
+                                            <b style=" color: #191970; ">FOREX</b>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="sc-price-button">
-                                    <a class="sc-price-btn" href="login.html">INVEST </a>
+                                    <a class="sc-price-btn" href="{{route('investment')}}">INVEST </a>
                                 </div>
                             </div>
                             <div class="price-shape-one"></div>
@@ -437,38 +440,38 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
-                        <div class="sc-price-item sc-price-active">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
+                        <div class="sc-price-item sc-price-active" style="border: 0.5rem solid #191970; border-radius: 0 2rem 2rem 0;">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
-                                    <img src="assets/images/icons/standard.png" alt="Standard" />
+                                    <i class="fas fa-coins" style="background:white; color: #191970; font-size:2rem"></i>
                                 </div>
                                 <div class="price-text">
-                                    <h2 class="sc-price">6.50% </h2>
-									<small class="sub-title">Interest daily </small>
-                                    <h4 class="sc-price">FUTURES -ASF02</h4>
+                                    <h2 class="sc-price" style=" color: #191970; ">10.50% </h2>
+                                    <small class="sub-title" style=" color: #191970; ">Interest daily </small>
+                                    <h4 class="sc-price" style=" color: #191970; ">STOCK PLAN</h4>
                                 </div>
                             </div>
                             <div class="sc-content-area">
                                 <div class="sc-content-list sc-mb-25 sc-pt-10">
                                     <ul class="list-gap sc-list">
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Min: 10,000                                        </li>
-                                        <li>
-                                            <i class="icon-check"></i>
-                                            Max: 50,000                                        </li>
-                                        <li>
-                                            <i class="icon-check"></i>
-                                            TRADING INSTRUMENTS: WTI CRUDE OIL, S&P 500, BTCUSDT, ATOMUSDT, RENUSDT, UK 100, Germany 40, US Tech 100, Japan 225, Australia 200, China A50                                        </li>
+                                            <i class="fas fa-sort-amount-down" style="background:white; color: #191970; "></i>
+                                            Max: $500,000                                       </li>
+                                            <li>
+                                                <i class="fas fa-sort-amount-up" style="background:white; color: #191970; "></i>
+                                                Max: $5,000,000                                       </li>
+                                                <li>
+                                            <i class="fas fa-info-circle" style="background:white; color: #191970; "></i>
+                                            TRADING INSTRUMENTS: BITCOIN, ETHEREUM, SOLANA, BNB SMART CHAIN, USDT A50                                        </li>
                                         <li>
 
-                                            <b>FUTURES</b>
+                                            <b style=" color: #191970; ">STOCK</b>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="sc-price-button">
-                                    <a class="sc-price-btn" href="login.html">INVEST </a>
+                                    <a class="sc-price-btn" href="{{route('investment')}}">INVEST </a>
                                 </div>
                             </div>
                             <div class="price-shape-one"></div>
@@ -478,38 +481,39 @@
                     </div>
 
 
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
-                        <div class="sc-price-item sc-price-active">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
+                        <div class="sc-price-item sc-price-active" style="border: 0.5rem solid #191970; border-radius: 0 2rem 2rem 0;">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
-                                    <img src="assets/images/icons/standard.png" alt="Standard" />
+                                    <i class="fas fa-coins" style="background:white; color: #191970; font-size:2rem"></i>
                                 </div>
                                 <div class="price-text">
-                                    <h2 class="sc-price">8.00% </h2>
-									<small class="sub-title">Interest daily </small>
-                                    <h4 class="sc-price">ASF-STOCKS CRYPTO </h4>
+                                    <h2 class="sc-price" style=" color: #191970; ">12.50% </h2>
+                                    <small class="sub-title" style=" color: #191970; ">Interest daily </small>
+                                    <h4 class="sc-price" style=" color: #191970; ">REIT PLAN</h4>
                                 </div>
                             </div>
                             <div class="sc-content-area">
                                 <div class="sc-content-list sc-mb-25 sc-pt-10">
                                     <ul class="list-gap sc-list">
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Min: 5,000                                        </li>
+                                            <i class="fas fa-sort-amount-down" style="background:white; color: #191970; "></i>
+                                            Max: $5,000,000                                       </li>
                                         <li>
-                                            <i class="icon-check"></i>
-                                            Max: 99,999                                        </li>
-                                        <li>
-                                            <i class="icon-check"></i>
-                                            TRADING INSTRUMENTS: BTC, ETH, BNB, CAD, XRP, NEX, XDC, XRM, KAVA                                        </li>
+                                            <li>
+                                                <i class="fas fa-sort-amount-up" style="background:white; color: #191970; "></i>
+                                                Max: $50,000,000                                       </li>
+                                                <li>
+                                            <i class="fas fa-info-circle" style="background:white; color: #191970; "></i>
+                                            TRADING INSTRUMENTS:  BITCOIN, ETHEREUM, SOLANA, BNB SMART CHAIN, USDT                                      </li>
                                         <li>
 
-                                            <b>STOCKS</b>
+                                            <b style=" color: #191970; ">REIT</b>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="sc-price-button">
-                                    <a class="sc-price-btn" href="login.html">INVEST </a>
+                                    <a class="sc-price-btn" href="{{route('investment')}}">INVEST </a>
                                 </div>
                             </div>
                             <div class="price-shape-one"></div>
@@ -518,8 +522,8 @@
                         </div>
                     </div>
 
-
-					<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
+{{--
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300" style="background: #fff">
                         <div class="sc-price-item sc-price-active">
                             <div class="sc-price-text d-flex align-items-center">
                                 <div class="sc-price-icon sc-mr-25">
@@ -527,7 +531,7 @@
                                 </div>
                                 <div class="price-text">
                                     <h2 class="sc-price">10.00% </h2>
-									<small class="sub-title">Interest daily </small>
+                                    <small class="sub-title">Interest daily </small>
                                     <h4 class="sc-price">ASF STOCKS - XX1</h4>
                                 </div>
                             </div>
@@ -557,20 +561,20 @@
                             <div class="price-shape-two"></div>
                             <div class="price-shape-three"></div>
                         </div>
-                    </div>
+                    </div> --}}
 
 
-				</div>
+                </div>
             </div>
         </div>
         <!--=========== popular section End =========-->
-
+        
         <!--=========== testimonial section Start =========-->
         <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80" style="background: black">
             <div class="container">
                 <div class="row">
-					<div class="col-md-6">
-						<h5 CLASS="text-center  text-success">LATEST DEPOSITS </h5>
+                    <div class="col-md-6">
+                        <h5 CLASS="text-center" style="color: #191970 !important">LATEST DEPOSITS </h5>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered">
                                         <thead>
@@ -581,170 +585,86 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                    @foreach ($deposits as $deposit )
 
-											                                            <tr>
+
+                                         <tr>
                                                 <td>
 
-                                                    <span> Chingdhina shaymitchell</span>
+                                                    <span> {{$deposit->user->name}}</span>
                                                 </td>
                                                 <td>
-                                                    $11,673,600.00                                                </td>
-
-                                                <td>
-                                                    BTC                                                </td>
-                                            </tr>
-
-												                                            <tr>
-                                                <td>
-
-                                                    <span> Alinikzad </span>
+                                                    {{$deposit->amount}}
                                                 </td>
-                                                <td>
-                                                    $299.00                                                </td>
 
                                                 <td>
-                                                    BTC                                                </td>
+                                                    {{$deposit->walletMethod->name}}
+                                                 </td>
                                             </tr>
+                                            @endforeach
 
-												                                            <tr>
-                                                <td>
 
-                                                    <span> Samuel Ben </span>
-                                                </td>
-                                                <td>
-                                                    $1,500.00                                                </td>
-
-                                                <td>
-                                                    USDT                                                </td>
-                                            </tr>
-
-												                                            <tr>
-                                                <td>
-
-                                                    <span> William James </span>
-                                                </td>
-                                                <td>
-                                                    $5,000.00                                                </td>
-
-                                                <td>
-                                                    USDT                                                </td>
-                                            </tr>
-
-												                                            <tr>
-                                                <td>
-
-                                                    <span> Samuel Ben </span>
-                                                </td>
-                                                <td>
-                                                    $5,000.00                                                </td>
-
-                                                <td>
-                                                    USDT                                                </td>
-                                            </tr>
-
-												                                        </tbody>
+                                    </tbody>
                                     </table>
                                 </div>
 
-					</div>
-					<div class="col-md-6">
-						<h5 class="text-center text-danger">LATEST WITHDRAWALS </h5>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-center " style="color: #191970 !important">LATEST WITHDRAWALS </h5>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th scope="col">NAME</th>
                                                 <th scope="col">AMOUNTS</th>
-                                                <th scope="col">Currency</th>
+                                                <th scope="col">METHOD</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-										                                            <tr>
+                                            @foreach ($withdrawals  as  $withdraw )
+                                          <tr>
                                                 <td>
 
-                                                    <span> Samuel Ben </span>
+                                                    <span>{{ $withdraw->user->name }}</span>
                                                 </td>
                                                 <td>
-                                                    $600.00                                                </td>
-                                                <td>
-
-													USDT                                                </td>
-                                            </tr>
-
-											                                            <tr>
-                                                <td>
-
-                                                    <span> Samuel Ben </span>
+                                                    {{$withdraw->amount}}
                                                 </td>
                                                 <td>
-                                                    $500.00                                                </td>
-                                                <td>
+                                                    {{-- {{ $withdraw->wallet->name ?? 'No Wallet Found' }}  --}}
+                                                    {{ $withdraw->wallet?->walletMethod?->name ?? 'No Method Found' }}
 
-													USDT                                                </td>
-                                            </tr>
-
-											                                            <tr>
-                                                <td>
-
-                                                    <span> Samuel Ben </span>
                                                 </td>
-                                                <td>
-                                                    $1,147.00                                                </td>
-                                                <td>
-
-													USDT                                                </td>
                                             </tr>
-
-											                                            <tr>
-                                                <td>
-
-                                                    <span> Martin </span>
-                                                </td>
-                                                <td>
-                                                    $580.00                                                </td>
-                                                <td>
-
-													USDT.TRC20                                                </td>
-                                            </tr>
-
-											                                            <tr>
-                                                <td>
-
-                                                    <span> mushelkarabo </span>
-                                                </td>
-                                                <td>
-                                                    $2,388.00                                                </td>
-                                                <td>
-
-													TRX                                                </td>
-                                            </tr>
-
-											                                     </tbody>
+                                            @endforeach
+                                         </tbody>
                                     </table>
                                 </div>
 
-					</div>
+                    </div>
 
-				 </div>
+                 </div>
             </div>
         </div>
         <!--=========== testimonial section End =========-->
-		 <!--=========== testimonial section Start =========-->
-        <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80" style="background: blac">
+         <!--=========== testimonial section Start =========-->
+        <div class="sc-testimonial-section-two sc-arrow-btn sc-pt-100 sc-pb-100 sc-md-pt-80 sc-md-pb-80" style="background: blac; margin-bottom: 0 !important;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
-                        <div class="testimonial-slider-image">
-                            <img src="assets/images/testimonial/md1.jpg" alt="Testimonial" style="border-radius: 50%; aspect-ratio: 1/1;"/>
+                        <div class="testimonial-slider-image ">
+                            <img src="assets/images/testimonial/max22.jpg" alt="Testimonial" style="border-radius: %; aspect-ratio: 1/1;
+                            width:px !important;
+                            "/>
                         </div>
                     </div>
                     <div class="col-lg-6 sc-md-mt-50" data-sal="slide-left" data-sal-duration="800">
                         <div class="sc-slider-content-area">
                             <div class="sc-heading-area sc-mb-20">
-                                <span class="sub-title"><i class="icon-line"></i> Client Feedback</span>
-
+                                <span class="sub-title"><i class="icon-line" style="color: #191970 !important"></i> Client Feedback</span>
+        
                                 <h2 class="title">
-                                 <span style="color: #fff"> Happy Client Feedback <span class="primary-color italic">About</span> Our Service </span>
+                                 <span style="color: #ff"> Happy Client Feedback <span class=" italic" style="color: #191970">About</span> Our Service </span>
                                 </h2>
                             </div>
                             <div class="swiper sc-tes-slider">
@@ -755,7 +675,7 @@
                                                 I was hesitant to invest my money at first, but Maxfund's investment professionals made the process easy and understandable. They took the time to explain my options and helped me create an investment plan that aligned with my goals. I am happy to say that my investments have performed well and I have seen a significant return on my investment. I would definitely recommend Maxfund to anyone looking for expert investment advice.
                                             </p>
                                             <div class="sc-slider-auother d-flex align-items-center">
-
+        
                                                 <div class="sc-auother-texty">
                                                     <h5 class="title">Juan Rodriguez</h5>
                                                     <span>Madrid, Spain</span>
@@ -769,7 +689,7 @@
                                                 I have been using Maxfund's services for several years now, and I have been extremely impressed with their knowledge and expertise. They offer a diverse range of investment products and services that have helped me achieve my financial goals. I appreciate their attention to detail and commitment to providing excellent customer service.
                                             </p>
                                             <div class="sc-slider-auother d-flex align-items-center">
-
+        
                                                 <div class="sc-auother-texty">
                                                     <h5 class="title">Sarah Lee</h5>
                                                     <span>London, UK</span>
@@ -783,7 +703,7 @@
                                                 Thanks to Maxfund, I finally feel like my investments are working for me. Their team of investment professionals took the time to understand my goals and risk tolerance and created a personalized investment plan that has helped me grow my portfolio significantly. I would highly recommend Maxfund to anyone who wants to invest with confidence.
                                             </p>
                                             <div class="sc-slider-auother d-flex align-items-center">
-
+        
                                                 <div class="sc-auother-texty">
                                                     <h5 class="title">David B.</h5>
                                                     <span>New York, USA</span>
@@ -801,18 +721,18 @@
             </div>
         </div>
         <!--=========== testimonial section End =========-->
-
-		  <!--=========== essential Section Start=========-->
-        <div class="sc-accordion-section-area sc-pb-80" id="faq">
+        
+          <!--=========== essential Section Start=========-->
+        <div class="sc-accordion-section-area sc-pb-80" id="faq" style="padding-top: 2px !important" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 p-z-idex" data-sal="slide-right" data-sal-duration="800">
                         <div class="sc-accordion-area sc-pr-10 sc-md-pr-0">
                             <div class="sc-heading-area sc-mb-35">
-                                <span class="sub-title"><i class="icon-line"></i> FAQ</span>
-
+                                <span class="sub-title"><i class="icon-line" style="color: #191970 !important"></i> FAQ</span>
+        
                                 <h2 class="title">
-                                    Frequently Asked <span class="primary-color italic">Questions</span> & Answer
+                                    Frequently Asked <span class="italic" style="color: #191970 !important">Questions</span> & Answer
                                 </h2>
                             </div>
                             <div class="accordion sc-faq-style" id="accordionExample">
@@ -838,8 +758,8 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Maxfund offers a wide range of investment products and services, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, high yield savings, and loans.
-												</strong
+                                                Maxfund offers a wide range of investment products and services, including stocks, bonds, futures, real estate investment trusts (REITs), commodities, cryptocurrency trading, high yield savings, and loans.
+                                                </strong
                                             >
                                         </div>
                                     </div>
@@ -866,8 +786,8 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												The minimum investment required to open an account with Maxfund varies depending on the investment product or service you choose. Please contact us for more information.
-												</strong
+                                                The minimum investment required to open an account with Maxfund varies depending on the investment product or service you choose. Please contact us for more information.
+                                                </strong
                                             >
                                         </div>
                                     </div>
@@ -894,8 +814,8 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Yes, our team of experienced investment professionals can work with you to create a personalized investment plan that is tailored to your unique needs and goals.
-												</strong
+                                                Yes, our team of experienced investment professionals can work with you to create a personalized investment plan that is tailored to your unique needs and goals.
+                                                </strong
                                             >
                                         </div>
                                     </div>
@@ -922,24 +842,24 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Maxfund uses a range of risk management strategies to help minimize risk for investors, including diversification, asset allocation, and ongoing portfolio monitoring and analysis.
-												</strong
+                                                Maxfund uses a range of risk management strategies to help minimize risk for investors, including diversification, asset allocation, and ongoing portfolio monitoring and analysis.
+                                                </strong
                                             >
                                         </div>
                                     </div>
                                 </div>
-
+        
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="sc-essential-image text-end sc-pl-40 sc-md-pl-0 sc-md-pt-50">
                             <img src="assets/images/project/max7.jpg" alt="Essential" />
-							<div class="">
-							 <br/>
-							<div class="accordion sc-faq-style" id="accordionExample">
-
-							<div class="accordion-item">
+                            <div class="">
+                             <br/>
+                            <div class="accordion sc-faq-style" id="accordionExample">
+        
+                            <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
                                         <button
                                             class="accordion-button collapsed"
@@ -961,24 +881,25 @@
                                         <div class="accordion-body">
                                             <strong
                                                 >
-												Yes, Maxfund takes the privacy and security of our clients' personal and financial information very seriously. We use industry-standard security measures to protect your information and adhere to strict privacy policies to ensure the confidentiality of your data.
-												</strong
+                                                Yes, Maxfund takes the privacy and security of our clients' personal and financial information very seriously. We use industry-standard security measures to protect your information and adhere to strict privacy policies to ensure the confidentiality of your data.
+                                                </strong
                                             >
                                         </div>
                                     </div>
                                 </div>
-
-								</div>
-
-							</div>
+        
+                                </div>
+        
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sc-essential-shape">
+            {{-- <div class="sc-essential-shape">
                 <img src="assets/images/bg/essential-shape.png" alt="Shape" />
-            </div>
+            </div> --}}
         </div>
+        
         <!--=========== essential Section End=========-->
 
 

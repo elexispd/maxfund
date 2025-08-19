@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Withdrawal;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\WithdrawalStatusNotification;
 
 class WithdrawalController extends Controller
 {
@@ -52,6 +53,8 @@ class WithdrawalController extends Controller
             'amount' => $request->amount,
             'description' => "Withdrawal request of {$request->amount} {$request->currency}",
         ]);
+
+        $withdrawal->user->notify(new WithdrawalStatusNotification($withdrawal, 'processing'));
 
         return redirect()->route('user.withdraw.create')
             ->with('success', 'Withdrawal request submitted successfully.');

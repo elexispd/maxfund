@@ -5,7 +5,7 @@
 
 <div class="page-inner">
     <div class="page-header">
-      <h3 class="fw-bold mb-3">Create Wallet</h3>
+      <h3 class="fw-bold mb-3">View Wallet</h3>
       <ul class="breadcrumbs mb-3">
         <li class="nav-home">
           <a href="#">
@@ -30,7 +30,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="card-title">Create Your Wallet</div>
+            <div class="card-title">View Your Wallet</div>
           </div>
           <div class="card-body">
             <div class="row">
@@ -57,7 +57,7 @@
                           <thead>
                             <tr>
                               <th>SN</th>
-                              <th>Wallet</th>
+                              <th>Network</th>
                               <th>Address</th>
                               <th>Action</th>
                             </tr>
@@ -67,7 +67,7 @@
                             @foreach ($wallets as $wallet)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $wallet->currency }}</td>
+                                <td>{{ $wallet->walletMethod->name . " " . $wallet->walletMethod->network }}</td>
                                 <td>{{ $wallet->address }}</td>
                                 <td>
                                     <form action="{{ route('user.wallet.destroy', $wallet->id) }}" method="POST" style="display:inline;">

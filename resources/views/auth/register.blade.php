@@ -22,7 +22,7 @@ new #[Layout('layouts.guest')] class extends Component
     {
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string',  'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -60,7 +60,7 @@ new #[Layout('layouts.guest')] class extends Component
                     <div class="card">
                         <!-- Section Title Start -->
                         <div class="card-header">
-                            <h3 class="text-primary" style="font-size: 2.5rem !important">Setup your account</h3>
+                            <h3 class="" style="font-size: 2.5rem !important; color:#191970">Setup your account</h3>
                         </div>
                         <!-- Section Title End -->
                                                          <div class="card-body">
@@ -336,9 +336,9 @@ new #[Layout('layouts.guest')] class extends Component
                                     <input type="hidden" value="{{ request()->query('ref') }}" class="form-control" name="ref"  >
                                 </div>
                                 <div class="form-group"><br/>
-                                    <input class="btn btn-primary"  type="submit" name="Register" value="Register">
+                                    <input class="btn"  type="submit" name="Register" value="Register" style="background:#191970; color:#fff">
                                 </div>
-                                <div class="form-group text-primary"><a href="{{route('login')}}">Already, have an account? Click here to login.</a> </div>
+                                <div class="form-group"><a href="{{route('login')}}" style="color:#191970">Already, have an account? Click here to login.</a> </div>
                             </form>
                         </div>
 

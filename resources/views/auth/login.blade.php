@@ -34,7 +34,7 @@ new #[Layout('layouts.guest')] class extends Component
 <section class="contact-page-wrap section-padding">
     <section class="about-style2-area card ">
         <div class="container">
-                 <h3 class="card-header text-info" style="font-size: 2.5rem !important"> Access your account </h3>
+                 <h3 class="card-header " style="font-size: 2.5rem !important; color:#191970;"> Access your account </h3>
 
 
                 <form wire:login method="post" class="card-body" id="login">
@@ -57,13 +57,13 @@ new #[Layout('layouts.guest')] class extends Component
                     </div>
                     <div class="form-group">
                         <br/>
-                        <button name="submit" class="btn btn-info">Login</button>
+                        <button name="submit" class="btn" style="background:#191970; color:white;">Login</button>
                     </div>
 
 
                 </form>
                 <div class="card-footer">
-                         <a href="{{route('register')}}">Don't have an account? Click here to register. </a> Forgot Password? <a href="{{route('password.request')}}"> Click here to recover password! </a>
+                         <a href="{{route('register')}}" style="color:#191970; font-weight:bolder;">Don't have an account? Click here to register. </a> Forgot Password? <a href="{{route('password.request')}}" style="color:#191970; font-weight:bolder;"> Click here to recover password! </a>
                     </div>
 
 

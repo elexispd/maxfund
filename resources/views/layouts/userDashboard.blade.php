@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>User Dashboard</title>
+    <title> MaxFund</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
     />
     <link
       rel="icon"
-      href="{{ asset('assets/img/kaiadmin/favicon.ico') }}"
+      href="{{ asset('assets/img/newlogo.jpg') }}"
       type="image/x-icon"
     />
     <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
@@ -42,6 +42,16 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
+    <style>
+    .footer {
+            padding: 20px;
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            border-top: 1px solid #e2e8f0;
+            background-color: #f7fafc;
+        }
+        </style>
   </head>
   <body>
     <div class="wrapper">
@@ -59,9 +69,9 @@
           <div class="main-header-logo">
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
-              <a href="index.html" class="logo">
+              <a href="" class="logo">
                 <img
-                  src="{{ asset('assets/img/kaiadmin/logo_light.svg') }}"
+                  src="{{ asset('assets/img/max16.jpg') }}"
                   alt="navbar brand"
                   class="navbar-brand"
                   height="20"
@@ -139,7 +149,7 @@
                   >
                     <div class="avatar-sm">
                       <img
-                        src="{{ asset('assets/img/profile.jpg') }}"
+                        src="{{ $user->profile_image ? asset('storage/'.$user->profile_image) : asset('images/avatar.jpg') }}"
                         alt="..."
                         class="avatar-img rounded-circle"
                       />
@@ -206,9 +216,11 @@
                 </li>
               </ul>
             </nav>
-            <div class="copyright">
-              2025<i class="fa fa-heart heart text-danger"></i>
-            </div>
+            <div class="footer">
+            <p>© {{ date('Y') }} MaxFund. All rights reserved.</p>
+
+            <p>Need assistance? Email us at <a href="mailto:support@maxfund.net" class=""style="color:#191970">support@maxfund.net</a></p>
+        </div>
 
           </div>
         </footer>
@@ -306,5 +318,10 @@
       </script>
 
 
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper","switcher_open_direction":"top","switcher_text_color":"#f7f7f7","switcher_arrow_color":"#f2f2f2","switcher_border_color":"#161616","switcher_background_color":"#303030","switcher_background_shadow_color":"#474747","switcher_background_hover_color":"#3a3a3a","dropdown_text_color":"#eaeaea","dropdown_hover_color":"#748393","dropdown_background_color":"#474747"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
+
+<script src="//code.jivosite.com/widget/rQA65kxaSX" async></script>
   </body>
 </html>

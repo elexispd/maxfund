@@ -54,7 +54,7 @@
                                             @if($investment->status == 'active')
                                                 <span class="badge badge-success">Active</span>
                                             @else
-                                                <span class="badge badge-primary">Completed</span>
+                                                <span class="badge" style="background: #191970; color: #fff; font-weight:bold;">Completed</span>
                                             @endif
                                         </td>
                                         <td>{{ $investment->start_date }}</td>

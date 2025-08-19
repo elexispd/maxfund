@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- favicon -->
         <link rel="apple-touch-icon" href="apple-touch-icon.html" />
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/newlogo.jpg') }}" />
         <!-- Bootstrap  v5.1.3 css -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <!-- Sall css -->
@@ -37,7 +37,7 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="images/favicon.png" alt="Maxfund" />
+                        <img src="{{ asset('assets/img/max18.jpg') }}" alt="Maxfund" />
                     </div>
                 </div>
                 <div class="txt-loading">
@@ -52,10 +52,7 @@
 @include('partials.header')
             <!-- Header Section Start -->
         @include('partials.navbar')
-        </header>
-        <div style="position:fixed; float:right; bottom:40%; z-index: 100; font-size:60px; color:blue; right:0; margin-right:20px;">
-            <a href="https://api.whatsapp.com/send?phone=447413729810" style="border-radius:20%; background:white;padding:2px;"><i class="fab fa-whatsapp"></i></a>
-        </div>
+        
         <!--========== Header Section End ==============-->
         <!--=========== breadcrumb Section Start =========-->
         <div class="sc-breadcrumb-style sc-pt-135 sc-pb-110">
@@ -80,19 +77,19 @@
                         <div class="sc-heading-area sc-pr-30 sc-pt-5">
                             <span class="sub-title"><i class="icon-line"></i> Direct Contact</span>
                             <h2 class="title">
-                                Need assistance about <span class="primary-color italic">our services & plans?</span>
+                                Need assistance about <span class="italic" style="color:#191970;">our services & plans?</span>
                             </h2>
                         </div>
                         <div class="sc-contact-info sc-mt-35 sc-mb-20">
                             <ul class="list-gap white-color">
-                                <li><i class="icon-phone-2"></i><a href="tel:"> </a></li>
+                                <li><i class="icon-phone-2"></i><a href="tel:3168329721">3168329721 </a></li>
                                 <li>
                                     <i class="icon-gap_2"></i>
-                                    <a href="cdn-cgi/l/email-protection.html#31585f575e71524354545541435e575845505d5d58505f52541f525e5c"> <span class="__cf_email__" data-cfemail="aac3c4ccc5eac9d8cfcfcedad8c5ccc3decbc6c6c3cbc4c9cf84c9c5c7">[email&#160;protected]</span></a>
+                                    <a href="mailto:support@maxfund.net"> <span class="__cf_email__" data-cfemail="aac3c4ccc5eac9d8cfcfcedad8c5ccc3decbc6c6c3cbc4c9cf84c9c5c7">support@maxfund.net</span></a>
                                 </li>
                                 <li>
                                     <i class="icon-mail2"></i
-                                    ><a href="cdn-cgi/l/email-protection.html#71181f171e31120314141501031e171805101d1d18101f12145f121e1c">4 New Road, Lesmahagow, Lanark, ML11 0EX</a>
+                                    ><a href="">4 New Road, Lesmahagow, Lanark, ML11 0EX</a>
                                 </li>
                             </ul>
                         </div>

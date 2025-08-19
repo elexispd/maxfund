@@ -32,7 +32,7 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Amount</th>
-                                        <th>Prove</th>
+                                        <th>Proof</th>
                                         <th>Date Requested</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -54,7 +54,7 @@
                                             @if($deposit->status == 'pending')
                                                <span class="badge badge-warning">Pending</span
                                             @elseif($deposit->status == 'approved')
-                                              <span class="badge badge-success">Approved</span
+                                              <span class="badge " style="color:#191970">Approved</span
                                             @else
                                                 <span class="badge badge-danger">Rejected</span
                                             @endif
@@ -64,7 +64,7 @@
                                             <form action="{{ route('admin.deposits.approve', $deposit) }}" method="POST" style="display: inline;">
                                                 @csrf
                                                 @method('PUT')
-                                                <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                                <button type="submit" class="btn btn-sm" style="background:#191970; color:#fff">Approve</button>
                                             </form>
                                             @else
                                             <span class="badge badge-secondary">Updated: {{ $deposit->updated_at->format('M d, Y H:i')  }}</span>

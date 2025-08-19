@@ -84,7 +84,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block">
+                            <button type="submit" class="btn  btn-block" style="background: #191970; color: white;">
                                 <i class="fas fa-check-circle"></i> Confirm Investment
                             </button>
                         </div>

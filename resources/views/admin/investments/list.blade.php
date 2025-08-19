@@ -6,15 +6,37 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Available Investment Plans</h4>
+                    <h4 class="card-title" style="color: #191970; font-weight:bolder;">Available Investment Plans</h4>
                 </div>
                 <div class="card-body">
+                     @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show">
+                            <i class="fas fa-check-circle"></i> {{ session('success') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+
+
+
+                    @if(session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-exclamation-circle me-3"></i>
+                                <div class="text-danger">
+                                    {{ session('error') }}
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
                     <div class="row">
                         @foreach($investmentPlans as $plan)
                         <div class="col-md-4 mb-4">
                             <div class="card plan-card h-100">
                                 <div class="card-body text-center">
-                                    <h3 class="card-title text-primary">{{ $plan->name }}</h3>
+                                    <h3 class="card-title" style="color: #191970; font-weight:bold;">{{ $plan->name }}</h3>
                                     <div class="plan-details mt-4">
                                         <div class="d-flex justify-content-between py-2">
                                             <span>Daily Profit:</span>
@@ -31,6 +53,13 @@
                                         <div class="d-flex justify-content-between py-2">
                                             <span>Duration:</span>
                                             <strong>{{ $plan->duration_days }} days</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-2">
+                                            <a href="{{ route('admin.investment.edit', $plan) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('admin.investment.destroy', $plan) }}" method="POST" style="display:inline;">
+                                                @csrf @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Delete this plan?')">Delete</button>
+                                            </form>
                                         </div>
                                     </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -27,6 +28,7 @@ class UserController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'country' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
+            'role' => 'required|string|max:20',
         ]);
 
         // Create a new user
@@ -36,6 +38,7 @@ class UserController extends Controller
             'country' => $request->country,
             'phone' => $request->phone,
             'password' => bcrypt('password'), // Default password
+            'role' => $request->role,
         ]);
         return redirect()->route('admin.user.create')->with('success', 'User created successfully.');
     }
@@ -54,7 +57,8 @@ class UserController extends Controller
             'country' => 'nullable|string',
             'city' => 'nullable|string',
             'dob' => 'nullable|date',
-            'status' => 'required|in:active,inactive'
+            'status' => 'required|in:active,inactive',
+            'role' =>"required"
         ]);
 
         $user->update($validated);
@@ -82,7 +86,11 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'User status updated successfully.');
     }
 
-
+    public function transactions()
+    {
+        $transactions = Transaction::orderBy('created_at', 'desc')->get();
+        return view('admin.transactions', compact('transactions'));
+    }
 
 
 

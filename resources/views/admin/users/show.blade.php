@@ -46,7 +46,11 @@
                     </div>
                     <div>
 
-
+                            <a class="btn  btn-sm" href="{{ route('admin.user.withdraw', $user->id) }}" style="background: #191970; color: #fff;">
+                            <i class="fas fa-money-check-alt"></i> Debit
+                        </a>
+                        <a class="btn  btn-sm" href="{{ route('admin.user.deposit', $user->id) }}" style="background: #191970; color: #fff;">
+                            <i class="fas fa-money-check-alt"></i> Credit </a>
                         <a class="btn btn-primary btn-sm" href="{{ route('admin.user.edit', $user->id) }}">
                             <i class="fas fa-edit mr-1"></i> Edit
                         </a>
@@ -125,7 +129,7 @@
                                 <h5 class="section-title fw-bold text-primary mb-3">
                                     <i class="fas fa-coins mr-2"></i>Wallet Addresses
                                 </h5>
-                                @if($user->wallets && count(json_decode($user->wallets, true)))
+                                @if($user->wallets && $user->wallets->isNotEmpty())
                                     <div class="table-responsive">
                                         <table class="table table-sm table-hover">
                                             <thead class="bg-light">
@@ -135,10 +139,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach(json_decode($user->wallets, true) as $wallet)
+                                                @foreach($user->wallets as $wallet)
                                                 <tr>
-                                                    <td class="text-uppercase">{{ $wallet['currency'] }}</td>
-                                                    <td class="text-monospace small">{{ $wallet['address'] }}</td>
+                                                    <td class="text-uppercase">{{ $wallet->walletMethod->name }}</td>
+                                                    <td class="text-monospace small">{{ $wallet->address }}</td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>

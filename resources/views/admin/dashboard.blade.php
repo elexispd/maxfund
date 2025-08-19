@@ -18,9 +18,9 @@
             <div class="row align-items-center">
               <div class="col-icon">
                 <div
-                  class="icon-big text-center icon-primary bubble-shadow-small"
+                  class="icon-big text-center  bubble-shadow-small" style="background:#191970; border-radius:1rem"
                 >
-                  <i class="fas fa-money-check-alt"></i>
+                  <i class="fas fa-money-check-alt" style="color:#fff;"></i>
                 </div>
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
@@ -39,9 +39,9 @@
             <div class="row align-items-center">
               <div class="col-icon">
                 <div
-                  class="icon-big text-center icon-info bubble-shadow-small"
+                  class="icon-big text-center  bubble-shadow-small"  style="background:#191970; border-radius:1rem"
                 >
-                  <i class="fas fa-users"></i>
+                  <i class="fas fa-users" style="color:#fff;"></i>
                 </div>
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
@@ -60,9 +60,9 @@
             <div class="row align-items-center">
               <div class="col-icon">
                 <div
-                  class="icon-big text-center icon-success bubble-shadow-small"
+                  class="icon-big text-center  bubble-shadow-small"  style="background:#191970; border-radius:1rem"
                 >
-                  <i class="fas fa-university"></i>
+                  <i class="fas fa-university"style="color:#fff;"></i>
                 </div>
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
@@ -81,9 +81,9 @@
             <div class="row align-items-center">
               <div class="col-icon">
                 <div
-                  class="icon-big text-center icon-secondary bubble-shadow-small"
+                  class="icon-big text-center  bubble-shadow-small"  style="background:#191970; border-radius:1rem"
                 >
-                  <i class="fas fa-money-check-alt"></i>
+                  <i class="fas fa-money-check-alt" style="color:#fff;"></i>
                 </div>
               </div>
               <div class="col col-stats ms-3 ms-sm-0">
@@ -96,84 +96,34 @@
           </div>
         </div>
       </div>
+
+      
+        <div class="card card-round mt-4">
+    <div class="card-header  text-white" style="background:white">
+        
+    </div>
+    <div class="card-body" style="background:white; color:black">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" style="background:white; color:black">
+            <div id="tradingview_crypto_mkt"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+            {
+                "width": "100%",
+                "height": "600",
+                "defaultColumn": "overview",
+                "screener_type": "crypto_mkt",
+                "displayCurrency": "USD",
+                "colorTheme": "light",
+                "locale": "en"
+            }
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+</div>
+
     </div>
 
 
-    <div class="row">
-
-      <div class="col-md-8">
-        <div class="card card-round">
-          <div class="card-header">
-            <div class="card-head-row card-tools-still-right">
-              <div class="card-title">Transaction History</div>
-              <div class="card-tools">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-icon btn-clean me-0"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i class="fas fa-ellipsis-h"></i>
-                  </button>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body p-0">
-            <div class="table-responsive">
-              <!-- Projects table -->
-              <table class="table align-items-center mb-0">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Purpose</th>
-                    <th scope="col" class="text-end">Date & Time</th>
-                    <th scope="col" class="text-end">Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    @foreach ($transactions as $trans)
-                    <tr>
-                        <th scope="row">
-                          <button
-                            class="btn btn-icon btn-round btn-success btn-sm me-2"
-                          >
-                            <i class="fa fa-check"></i>
-                          </button>
-                          {{ $trans->description }}
-                        </th>
-                        <td class="text-end">{{ $trans->created_at }}</td>
-                        <td class="text-end">${{ $trans->amount }}</td>
-                      </tr>
-                    @endforeach
-
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card card-primary card-round">
-          <div class="card-header">
-            <div class="card-head-row">
-              <div class="card-title">Referral</div>
-            </div>
-            <div class="card-category">Your Referral Link is</div>
-          </div>
-          <div class="card-body pb-0">
-            <div class="mb-4 mt-2">
-              <h1> <a> {{ Auth::user()->referral_code }}</a> </h1>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    
 @endsection

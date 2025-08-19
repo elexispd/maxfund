@@ -24,6 +24,16 @@
                     </p>
                 </div>
                 <div class="card-body">
+                    @csrf
+                    @if(session('success'))
+                        <div class="alert alert-success text-center">
+                            {{ session('success') }}
+                        </div>
+                    @elseif(session('error'))
+                        <div class="alert alert-danger text-center">
+                            {{ session('error') }}
+                        </div>
+                    @endif
 
 
                         <div class="table-responsive">
@@ -33,7 +43,7 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Amount</th>
-                                        <th>Currency</th>
+                                        <th>Network</th>
                                         <th>Wallet Address</th>
                                         <th>Date Requested</th>
                                         <th>Status</th>
@@ -47,10 +57,13 @@
                                         <td>{{ $withdraw->user->name }}</td>
                                         <td>${{ number_format($withdraw->amount, 2) }}</td>
                                         <td>
-
-                                            {{ ucwords($withdraw->wallet->currency) ?? 'N/A' }}
+                                            @if($withdraw->wallet && $withdraw->wallet->walletMethod)
+                                                {{ $withdraw->wallet->walletMethod->name }} {{ $withdraw->wallet->walletMethod->network }}
+                                            @else
+                                                N/A
+                                            @endif
                                         </td>
-                                        <td>{{ $withdraw->wallet->address }}</td>
+                                        <td>{{ $withdraw->wallet->address ?? 'No Wallet Found' }}</td>
                                         <td>{{ $withdraw->created_at->format('M d, Y H:i') }}</td>
                                         <td>
                                             @if($withdraw->status == 'pending')

@@ -48,10 +48,9 @@
                     @endif
                     <div class="form-group">
                         <label for="email2">Wallet Type</label>
-                        <select name="currency" class="form-control" id="">
+                         <select name="wallet_method_id" class="form-control" id="">
                             @foreach($walletMethods as $method)
-                                <option value="{{ $method->code }}"
-                                    @if(old('currency') == $method->code) selected @endif>
+                                <option value="{{ $method->id }}" @if(old('wallet_method_id') == $method->id) selected @endif>
                                     {{ $method->name }}
                                     @if($method->network) ({{ $method->network }}) @endif
                                 </option>

@@ -78,8 +78,16 @@
                             <option value="italy">Italy</option>
                         </select>
                       </div>
+                      <div class="form-group">
+                        <label for="">Role</label>
+                        <select name="role" id="" class="form-control">
+                            <option value="">Select Role</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                      </div>
 
-                      <button type="submit" class="btn btn-primary">Register</button>
+                      <button type="submit" class="btn" style="background:#191970; color:#fff">Register</button>
                 </form>
 
 

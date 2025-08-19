@@ -7,25 +7,30 @@ use App\Models\InvestmentPlan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
-
+use App\Notifications\Investment;
+use App\Models\User;
 
 class InvestmentController extends Controller
 {
+
+
+
     public function index()
     {
         $investments = Auth::user()->investments()
             ->with('plan') // Eager load the plan relationship
-            ->latest();
+            ->latest()
+            ->get();
 
         return view('investments.index', compact('investments'));
     }
+
     public function list()
     {
         $investmentPlans = InvestmentPlan::all();
         return view('investments.list', compact('investmentPlans'));
     }
 
-   // InvestmentController.php
     public function create(InvestmentPlan $plan)
     {
         return view('investments.create', compact('plan'));
@@ -55,7 +60,9 @@ class InvestmentController extends Controller
         try {
             $user = Auth::user();
 
-            // More explicit balance check
+            // Check if this is user's first investment
+            $isFirstInvestment = $user->investments()->count() === 0;
+
             if ($user->balance < $validated['amount']) {
                 throw new \Exception('Insufficient balance. You need $' .
                     number_format($validated['amount'] - $user->balance, 2) .
@@ -84,6 +91,34 @@ class InvestmentController extends Controller
                 'end_date' => now()->addDays($plan->duration_days)
             ]);
 
+            // Process referral bonus if this is first investment
+            if ($isFirstInvestment && $user->referred_by) {
+                $referrer = User::find($user->referred_by);
+                if ($referrer) {
+                    $referralBonus = $validated['amount'] * 0.05; // 5% of investment
+
+                    // Credit referrer
+                    $referrer->increment('balance', $referralBonus);
+
+                    // Create transaction for referrer
+                    $referrer->transactions()->create([
+                        'amount' => $referralBonus,
+                        'type' => 'referral_bonus',
+                        'status' => 'completed',
+                        'description' => 'Referral bonus from ' . $user->name
+                    ]);
+
+                    // Send notification
+                    $referrer->notify(new \App\Notifications\ReferralBonusNotification(
+                        $referrer,
+                        $user,
+                        $referralBonus
+                    ));
+                }
+            }
+
+            $user->notify(new \App\Notifications\InvestmentCreatedNotification($investment, $plan));
+
             DB::commit();
 
             return redirect()
@@ -96,7 +131,7 @@ class InvestmentController extends Controller
 
             return back()
                 ->withInput()
-                ->with('error', $e->getMessage()); // Ensure error is passed
+                ->with('error', $e->getMessage());
         }
     }
 }

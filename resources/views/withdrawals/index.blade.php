@@ -43,7 +43,7 @@
                           <thead>
                             <tr>
                               <th>SN</th>
-                              <th>Wallet</th>
+                              <th>Network</th>
                               <th>Amount</th>
                               <th>Date</th>
                               <th>Status</th>
@@ -55,7 +55,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
-                                        {{ ucwords($withdrawal->wallet->currency) }}
+                                        {{ $withdrawal->wallet->walletMethod->name ." ". ($withdrawal->wallet->walletMethod->network) }}
                                     </td>
                                     <td>${{ number_format($withdrawal->amount, 2) }}</td>
                                     <td>{{ $withdrawal->created_at }}</td>

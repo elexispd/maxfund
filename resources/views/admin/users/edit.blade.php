@@ -111,10 +111,20 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            <label>Role</label>
+                            <select name="role" class="form-control @error('role') is-invalid @enderror">
+                                <option value="admin" {{ old('role', $user->role) == 'admin' ? 'selected' : '' }}>Admin</option>
+                                <option value="user" {{ old('role', $user->role) == 'user' ? 'selected' : '' }}>User</option>
+                            </select>
+                            @error('status')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <div class="form-group mt-4">
-                            <button type="submit" class="btn btn-primary">Update User</button>
-                            <a href="{{ route('admin.user.show', $user->id) }}" class="btn btn-secondary ml-2">Back</a>
+                            <button type="submit" class="btn" style="background:#191970; color:#fff">Update User</button>
+                            <a href="{{ route('admin.user.show', $user->id) }}" class="btn ml-2" style="background:#191970; color:#fff">Back</a>
                         </div>
                     </form>
                 </div>

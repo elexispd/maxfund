@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\InvestmentPlan;
 
 class MenuConroller extends Controller
 {
@@ -20,5 +21,10 @@ class MenuConroller extends Controller
     }
     public function terms(){
         return view('menu.terms');
+    }
+     public function investment()
+    {
+        $investmentPlans = InvestmentPlan::all();
+        return view('menu.investment', compact('investmentPlans'));
     }
 }

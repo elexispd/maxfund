@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Available Investment Plans</h4>
+                    <h4 class="card-title" style="color: #191970; font-weight:bolder">Available Investment Plans</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -14,7 +14,7 @@
                         <div class="col-md-4 mb-4">
                             <div class="card plan-card h-100">
                                 <div class="card-body text-center">
-                                    <h3 class="card-title text-primary">{{ $plan->name }}</h3>
+                                    <h3 class="card-title " style="color: #191970; font-weight:bold;">{{ $plan->name }}</h3>
                                     <div class="plan-details mt-4">
                                         <div class="d-flex justify-content-between py-2">
                                             <span>Daily Profit:</span>
@@ -34,7 +34,7 @@
                                         </div>
                                     </div>
                                     <a href="{{ route('user.investment.create', $plan->slug) }}"
-                                        class="btn btn-primary btn-round mt-4">
+                                        class="btn  btn-round mt-4" style="background: #191970; color: white;">
                                         Invest Now
                                      </a>
                                 </div>

@@ -5,9 +5,11 @@ use App\Http\Controllers\WalletController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\InvestmentController;
+use App\Http\Controllers\InvestmentPlanController;
 use App\Http\Controllers\ReferralController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WithdrawalController;
+use App\Http\Controllers\TransferController;
 
 use App\Http\Controllers\Admin\DepositController as AdminDepositController;
 use App\Http\Controllers\Admin\InvestmentController as AdminInvestmentController;
@@ -15,23 +17,45 @@ use App\Http\Controllers\Admin\ReferralController as AdminReferralController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\WithdrawController as AdminWithdrawalController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Controllers\Admin\AdminKYCController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\MenuConroller;
+use App\Models\Withdrawal;
+use App\Models\Deposit;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
-    return view('welcome');
+    $withdrawals = Withdrawal::orderBy('created_at', 'desc')->paginate(5);
+    $deposits = Deposit::orderBy('created_at', 'desc')->paginate(5);
+    return view('welcome', compact('withdrawals', 'deposits'));
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::get('/test-account-status', function() {
+    $user = App\Models\User::first();
+    $user->notify(new App\Notifications\AccountStatusNotification('disabled'));
+    return 'Notification sent!';
+});
+
+
+
+
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// });
+
+Route::middleware(['auth', 'verified'])->group(function () {
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-});
 
-Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/{user}edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile/password', [ProfileController::class, 'showPasswordForm'])->name('profile.password');
+    Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password.update');
+    Route::post('/upload-image', [ProfileController::class, 'uploadPhoto'])->name('profile.upload.image');
 
     Route::prefix('/wallets')->group(function () {
         Route::get('/', [WalletController::class, 'index'])->name('user.wallet.index');
@@ -44,6 +68,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [TransactionController::class, 'index'])->name('user.transaction.index');
         Route::get('/create', [TransactionController::class, 'create'])->name('user.transaction.create');
         Route::post('/create', [TransactionController::class, 'store'])->name('user.transaction.store');
+        Route::get('/transaction', [TransactionController::class, 'show'])->name('user.transaction.transaction');
     });
 
     Route::prefix('/deposits')->group(function () {
@@ -63,6 +88,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/create', [InvestmentController::class, 'store'])->name('user.investment.store');
     });
 
+
     Route::prefix('/referrals')->group(function () {
         Route::get('/', [ReferralController::class, 'index'])->name('user.referral.index');
     });
@@ -80,7 +106,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::prefix('/admin')->group(function () {
-
+         Route::get('/transactions', [AdminUserController::class, 'transactions'])->name('admin.transaction');
         Route::prefix('/users')->group(function () {
             Route::get('/', [AdminUserController::class, 'index'])->name('admin.user.index');
             Route::get('/create', [AdminUserController::class, 'create'])->name('admin.user.create');
@@ -90,6 +116,16 @@ Route::middleware('auth')->group(function () {
             Route::get('/{user}', [AdminUserController::class, 'show'])->name('admin.user.show');
             Route::put('/{user}/status', [AdminUserController::class, 'changeStatus'])->name('admin.user.change-status');
             Route::delete('/{user}', [AdminUserController::class, 'destroy'])->name('admin.user.destroy');
+              // Show the deposit form for admin to deposit for a user
+            Route::get('/admin/users/{id}/deposit', [DepositController::class, 'createForUser'])->name('admin.user.deposit');
+
+            // Handle the deposit form submission
+            Route::post('/admin/users/{id}/deposit', [DepositController::class, 'storeForUser'])->name('admin.user.deposit.store');
+            // Show withdrawal form
+            Route::get('/admin/users/{id}/withdraw', [DepositController::class, 'createWithdrawal'])->name('admin.user.withdraw');
+
+            // Process withdrawal
+            Route::post('/admin/users/{id}/withdraw', [DepositController::class, 'storeWithdrawal'])->name('admin.user.withdraw.store');
 
         });
 
@@ -109,6 +145,21 @@ Route::middleware('auth')->group(function () {
             Route::get('/{investment}', [AdminInvestmentController::class, 'show'])->name('admin.investment.show');
         });
 
+        Route::prefix('plans')->group(function () {
+            Route::get('/create', [InvestmentPlanController::class, 'create'])->name('admin.investment.create');
+            Route::post('/create', [InvestmentPlanController::class, 'store'])->name('admin.investment.store');
+            Route::get('/{plan}/edit', [InvestmentPlanController::class, 'edit'])->name('admin.investment.edit');
+            Route::put('/{plan}', [InvestmentPlanController::class, 'update'])->name('admin.investment.update');
+            Route::delete('/{plan}', [InvestmentPlanController::class, 'destroy'])->name('admin.investment.destroy');
+        });
+
+        Route::prefix('transfers')->group(function () {
+            Route::get('/', [TransferController::class, 'index'])->name('transfer.index');
+            Route::get('/create', [TransferController::class, 'create'])->name('transfer.create');
+            Route::post('/create', [TransferController::class, 'store'])->name('transfer.store');
+        });
+
+
         Route::prefix('/withdraw')->group(function () {
             Route::get('/', [AdminWithdrawalController::class, 'index'])->name('admin.withdraw.index');
             Route::put('/approve/{withdraw}', [AdminWithdrawalController::class, 'approve'])->name('admin.withdraw.approve');
@@ -117,6 +168,13 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/referrals')->group(function () {
             Route::get('/{user}', [AdminReferralController::class, 'index'])->name('admin.referral.index');
+        });
+
+        Route::prefix('/kyc')->group(function () {
+            Route::get('/', [AdminKYCController::class, 'index'])->name('admin.kyc.index');
+            Route::get('/{kyc}', [AdminKYCController::class, 'show'])->name('admin.kyc.show');
+            Route::post('/{kyc}/approve', [AdminKYCController::class, 'approve'])->name('admin.kyc.approve');
+            Route::post('/{kyc}/reject', [AdminKYCController::class, 'reject'])->name('admin.kyc.reject');
         });
 
 
@@ -135,6 +193,7 @@ Route::get('/creed', function () {
     return view('index'); // index.blade.php in resources/views
 });
 
+Route::get('/investment', [MenuConroller::class, 'investment'])->name('investment');
 Route::get('/services', [MenuConroller::class, 'services'])->name('services');
 Route::get('/about', [MenuConroller::class, 'about'])->name('about');
 Route::get('/faq', [MenuConroller::class, 'faq'])->name('faq');

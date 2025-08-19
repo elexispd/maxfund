@@ -37,7 +37,7 @@
                         <select name="wallet_address" class="form-control" id="">
                             @foreach($wallets as $wallet)
                                 <option value="{{ $wallet->id }}">
-                                    {{ ucwords($wallet->currency) }} - [{{ $wallet->address }}]
+                                    {{ $wallet->walletMethod->name . " ".  $wallet->walletMethod->network }} - [{{ $wallet->address }}]
                                 </option>
                             @endforeach
                         </select>
@@ -50,12 +50,12 @@
                           class="form-control"
                           name="amount"
                         />
-                        <label for="" class="text-info">
-                            Minimum withdrawal is {{ Auth::user()->balance }}
+                        <label for="" class=""style="color: #191970; font-weight:bold">
+                            Maximum withdrawal is {{ Auth::user()->balance }}
                           </label>
                     </div>
 
-                    <button class="btn btn-primary">Proceed withdraw</button>
+                    <button class="btn" style="background: #191970; color: white;">Proceed withdraw</button>
                 </form>
 
                 <hr>

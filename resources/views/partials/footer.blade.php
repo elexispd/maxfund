@@ -24,7 +24,7 @@
             >
                 <div class="footer-about sc-md-mb-45">
                     <div class="footer-logo sc-mb-30">
-                        <a href="index-2.html"><img src="assets/images/project/logo.jpg" alt="Maxfund" style="width:150px; height:100px;"/></a>
+                        <a href="/"><img src="assets/images/project/logo3.jpg" alt="Maxfund" style="width:80px; border-radius: 3rem !important; height: 80px;"/></a>
                     </div>
                     <p class="footer-des">
                         At Maxfund, we are committed to providing exceptional customer service and personalized attention to all our clients.
@@ -44,20 +44,12 @@
                         <div class="col-sm-6">
                             <ul class="footer-menu-list">
                                 <li><a href="{{route('register')}}">Register</a></li>
-                                <li><a href="{{route('user.investment.plan')}}">Investment Plans</a></li>
+                                <li><a href="{{route('investment')}}">Investment Plans</a></li>
                                 <li><a href="{{route('terms')}}">Terms & Privacy</a></li>
                                 <li><a href="{{route('faq')}}">FAQ</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="sc-contact-number border-style d-flex align-items-center">
-                        <div class="phone-icon">
-                            <i class="fab fa-whatsapp" style="font-size:18px; color:green; font-weight:bold; padding:5px;"></i>
-                        </div>
-                        <div class="contact-number">
 
-                            <a href="https://api.whatsapp.com/send?phone=" class="number"> </a>
-                        </div>
                     </div>
                                                     </div>
                     </div>
@@ -85,7 +77,7 @@
 <div class="sc-product-offcanvas-area">
     <div class="sc-offcanvas-header d-flex align-items-center justify-content-between">
         <div class="sticky-logo logo-area text-center">
-            <a href="index-2.html"><img src="assets/images/project/logo.jpg" alt="Logo" width="140px"/></a>
+            <a href="index-2.html"><img src="assets/img/newlogo.jpg" alt="Logo" style="width: 90px;border-radius:3rem; height: 90px;"/></a>
         </div>
         <div class="offcanvas-icon">
             <a id="canva_close" href="#">
@@ -191,7 +183,9 @@
 <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper","switcher_open_direction":"top","switcher_text_color":"#f7f7f7","switcher_arrow_color":"#f2f2f2","switcher_border_color":"#161616","switcher_background_color":"#303030","switcher_background_shadow_color":"#474747","switcher_background_hover_color":"#3a3a3a","dropdown_text_color":"#eaeaea","dropdown_hover_color":"#748393","dropdown_background_color":"#474747"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
 
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siqda3606ca1d4348996a5f0595115c88267304ab3035a1be2f61c60866af218bd7" defer></script>
+
+<script src="//code.jivosite.com/widget/rQA65kxaSX" async></script>
+
 </body>
 
 <!-- Mirrored from creedprofitalliance.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Apr 2025 09:13:57 GMT -->

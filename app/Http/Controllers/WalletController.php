@@ -23,13 +23,15 @@ class WalletController extends Controller
 
     public function store(Request $request)
     {
-        // Validate and create a new wallet
         $request->validate([
-            'currency' => 'required|string|max:255',
+            'wallet_method_id' => 'required|exists:wallet_methods,id',
             'address' => 'required|string|max:255',
         ]);
 
-        Auth::user()->wallets()->create($request->all());
+        Auth::user()->wallets()->create([
+            'wallet_method_id' => $request->wallet_method_id,
+            'address' => $request->address,
+        ]);
 
         return redirect()->route('user.wallet.create')->with('success', 'Wallet created successfully.');
     }

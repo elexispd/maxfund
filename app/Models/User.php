@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Wallet;
 
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -34,6 +34,7 @@ class User extends Authenticatable
         'kyc_verified',
         'country',
         'status',
+        'profile_image',
         'password',
     ];
 
@@ -98,6 +99,32 @@ class User extends Authenticatable
     public function withdrawals()
     {
         return $this->hasMany(Withdrawal::class);
+    }
+
+     public function kycVerification()
+    {
+        return $this->hasOne(KYCVerification::class);
+    }
+
+    public function hasPendingKYC()
+    {
+        return $this->kycVerification && $this->kycVerification->status === 'pending';
+    }
+
+    public function hasApprovedKYC()
+    {
+        return $this->kycVerification && $this->kycVerification->status === 'approved';
+    }
+
+    public function kycVerifications()
+    {
+        return $this->hasMany(KYCVerification::class);
+    }
+
+    public function successfulReferrals()
+    {
+        return $this->hasMany(User::class, 'referred_by')
+                    ->whereHas('investments');
     }
 
 

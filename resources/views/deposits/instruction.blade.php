@@ -39,7 +39,7 @@
 
                         <div class="mb-3">
                             <label for="screenshot" class="form-label">Transaction Proof</label>
-                            <input type="file" class="form-control" name="screenshot" required>
+                            <input type="file" class="form-control" accept=".png,.jpg,.jpeg" name="screenshot" required>
                             <small class="text-muted">Upload a screenshot of your transaction</small>
                         </div>
 
